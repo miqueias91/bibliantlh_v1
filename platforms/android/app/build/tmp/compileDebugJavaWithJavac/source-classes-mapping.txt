@@ -1,0 +1,282 @@
+org/apache/cordova/file/InvalidModificationException.java
+ org.apache.cordova.file.InvalidModificationException
+com/silkimen/cordovahttp/CordovaHttpResponse.java
+ com.silkimen.cordovahttp.CordovaHttpResponse
+cordova/plugins/Diagnostic_Location.java
+ cordova.plugins.Diagnostic_Location
+ cordova.plugins.Diagnostic_Location$1
+org/apache/cordova/file/ContentFilesystem.java
+ org.apache.cordova.file.ContentFilesystem
+org/apache/cordova/file/FileUtils.java
+ org.apache.cordova.file.FileUtils
+ org.apache.cordova.file.FileUtils$1
+ org.apache.cordova.file.FileUtils$10
+ org.apache.cordova.file.FileUtils$11
+ org.apache.cordova.file.FileUtils$12
+ org.apache.cordova.file.FileUtils$13
+ org.apache.cordova.file.FileUtils$14
+ org.apache.cordova.file.FileUtils$15
+ org.apache.cordova.file.FileUtils$16
+ org.apache.cordova.file.FileUtils$17
+ org.apache.cordova.file.FileUtils$18
+ org.apache.cordova.file.FileUtils$19
+ org.apache.cordova.file.FileUtils$2
+ org.apache.cordova.file.FileUtils$20
+ org.apache.cordova.file.FileUtils$21
+ org.apache.cordova.file.FileUtils$22
+ org.apache.cordova.file.FileUtils$23
+ org.apache.cordova.file.FileUtils$24
+ org.apache.cordova.file.FileUtils$25
+ org.apache.cordova.file.FileUtils$26
+ org.apache.cordova.file.FileUtils$27
+ org.apache.cordova.file.FileUtils$28
+ org.apache.cordova.file.FileUtils$29
+ org.apache.cordova.file.FileUtils$3
+ org.apache.cordova.file.FileUtils$4
+ org.apache.cordova.file.FileUtils$5
+ org.apache.cordova.file.FileUtils$6
+ org.apache.cordova.file.FileUtils$7
+ org.apache.cordova.file.FileUtils$8
+ org.apache.cordova.file.FileUtils$9
+ org.apache.cordova.file.FileUtils$FileOp
+name/ratson/cordova/admob/interstitial/InterstitialExecutor.java
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$1
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$2
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$3
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$4
+ name.ratson.cordova.admob.interstitial.InterstitialExecutor$5
+com/adobe/phonegap/push/PushInstanceIDListenerService.java
+ com.adobe.phonegap.push.PushInstanceIDListenerService
+nl/xservices/plugins/Insomnia.java
+ nl.xservices.plugins.Insomnia
+ nl.xservices.plugins.Insomnia$1
+ nl.xservices.plugins.Insomnia$2
+com/silkimen/cordovahttp/CordovaHttpOperation.java
+ com.silkimen.cordovahttp.CordovaHttpOperation
+com/phonegap/iindicate/BuildConfig.java
+ com.phonegap.iindicate.BuildConfig
+org/apache/cordova/dialogs/Notification.java
+ org.apache.cordova.dialogs.Notification
+ org.apache.cordova.dialogs.Notification$1
+ org.apache.cordova.dialogs.Notification$2
+ org.apache.cordova.dialogs.Notification$2$1
+ org.apache.cordova.dialogs.Notification$2$2
+ org.apache.cordova.dialogs.Notification$3
+ org.apache.cordova.dialogs.Notification$3$1
+ org.apache.cordova.dialogs.Notification$3$2
+ org.apache.cordova.dialogs.Notification$3$3
+ org.apache.cordova.dialogs.Notification$3$4
+ org.apache.cordova.dialogs.Notification$4
+ org.apache.cordova.dialogs.Notification$4$1
+ org.apache.cordova.dialogs.Notification$4$2
+ org.apache.cordova.dialogs.Notification$4$3
+ org.apache.cordova.dialogs.Notification$4$4
+ org.apache.cordova.dialogs.Notification$5
+ org.apache.cordova.dialogs.Notification$5$1
+ org.apache.cordova.dialogs.Notification$6
+ org.apache.cordova.dialogs.Notification$6$1
+com/silkimen/http/TLSSocketFactory.java
+ com.silkimen.http.TLSSocketFactory
+nl/xservices/plugins/SocialSharing.java
+ nl.xservices.plugins.SocialSharing
+ nl.xservices.plugins.SocialSharing$1
+ nl.xservices.plugins.SocialSharing$1$1
+ nl.xservices.plugins.SocialSharing$2
+ nl.xservices.plugins.SocialSharing$2$1
+ nl.xservices.plugins.SocialSharing$2$2
+ nl.xservices.plugins.SocialSharing$2$2$1
+ nl.xservices.plugins.SocialSharing$2$3
+ nl.xservices.plugins.SocialSharing$3
+ nl.xservices.plugins.SocialSharing$3$1
+ nl.xservices.plugins.SocialSharing$4
+ nl.xservices.plugins.SocialSharing$SocialSharingRunnable
+com/silkimen/http/HttpBodyDecoder.java
+ com.silkimen.http.HttpBodyDecoder
+org/apache/cordova/whitelist/WhitelistPlugin.java
+ org.apache.cordova.whitelist.WhitelistPlugin
+ org.apache.cordova.whitelist.WhitelistPlugin$1
+ org.apache.cordova.whitelist.WhitelistPlugin$CustomConfigXmlParser
+cc/fovea/Constants.java
+ cc.fovea.Constants
+com/adobe/phonegap/push/FCMService.java
+ com.adobe.phonegap.push.FCMService
+com/silkimen/cordovahttp/CordovaHttpBase.java
+ com.silkimen.cordovahttp.CordovaHttpBase
+name/ratson/cordova/admob/AdMob.java
+ name.ratson.cordova.admob.AdMob
+org/apache/cordova/file/Filesystem.java
+ org.apache.cordova.file.Filesystem
+ org.apache.cordova.file.Filesystem$LimitedInputStream
+ org.apache.cordova.file.Filesystem$ReadFileCallback
+org/apache/cordova/file/TypeMismatchException.java
+ org.apache.cordova.file.TypeMismatchException
+com/silkimen/cordovahttp/CordovaHttpUpload.java
+ com.silkimen.cordovahttp.CordovaHttpUpload
+name/ratson/cordova/admob/banner/BannerListener.java
+ name.ratson.cordova.admob.banner.BannerListener
+name/ratson/cordova/admob/Actions.java
+ name.ratson.cordova.admob.Actions
+org/apache/cordova/file/LocalFilesystemURL.java
+ org.apache.cordova.file.LocalFilesystemURL
+org/apache/cordova/file/DirectoryManager.java
+ org.apache.cordova.file.DirectoryManager
+com/verso/cordova/clipboard/Clipboard.java
+ com.verso.cordova.clipboard.Clipboard
+com/adobe/phonegap/push/BackgroundActionButtonHandler.java
+ com.adobe.phonegap.push.BackgroundActionButtonHandler
+cordova/plugins/Diagnostic_External_Storage.java
+ cordova.plugins.Diagnostic_External_Storage
+com/adobe/phonegap/push/PushPlugin.java
+ com.adobe.phonegap.push.PushPlugin
+ com.adobe.phonegap.push.PushPlugin$1
+ com.adobe.phonegap.push.PushPlugin$10
+ com.adobe.phonegap.push.PushPlugin$11
+ com.adobe.phonegap.push.PushPlugin$2
+ com.adobe.phonegap.push.PushPlugin$3
+ com.adobe.phonegap.push.PushPlugin$4
+ com.adobe.phonegap.push.PushPlugin$5
+ com.adobe.phonegap.push.PushPlugin$6
+ com.adobe.phonegap.push.PushPlugin$7
+ com.adobe.phonegap.push.PushPlugin$8
+ com.adobe.phonegap.push.PushPlugin$9
+org/apache/cordova/file/LocalFilesystem.java
+ org.apache.cordova.file.LocalFilesystem
+cordova/plugins/Diagnostic_Camera.java
+ cordova.plugins.Diagnostic_Camera
+name/ratson/cordova/admob/rewardvideo/RewardVideoExecutor.java
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$1
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$2
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$3
+name/ratson/cordova/admob/CordovaEventBuilder.java
+ name.ratson.cordova.admob.CordovaEventBuilder
+org/apache/cordova/networkinformation/NetworkManager.java
+ org.apache.cordova.networkinformation.NetworkManager
+ org.apache.cordova.networkinformation.NetworkManager$1
+org/apache/cordova/splashscreen/SplashScreen.java
+ org.apache.cordova.splashscreen.SplashScreen
+ org.apache.cordova.splashscreen.SplashScreen$1
+ org.apache.cordova.splashscreen.SplashScreen$2
+ org.apache.cordova.splashscreen.SplashScreen$3
+ org.apache.cordova.splashscreen.SplashScreen$4
+ org.apache.cordova.splashscreen.SplashScreen$4$1
+ org.apache.cordova.splashscreen.SplashScreen$5
+ org.apache.cordova.splashscreen.SplashScreen$5$1
+ org.apache.cordova.splashscreen.SplashScreen$6
+ org.apache.cordova.splashscreen.SplashScreen$6$1
+ org.apache.cordova.splashscreen.SplashScreen$7
+org/apache/cordova/file/NoModificationAllowedException.java
+ org.apache.cordova.file.NoModificationAllowedException
+com/adobe/phonegap/push/PushHandlerActivity.java
+ com.adobe.phonegap.push.PushHandlerActivity
+cordova/plugins/Diagnostic.java
+ cordova.plugins.Diagnostic
+ cordova.plugins.Diagnostic$1
+ cordova.plugins.Diagnostic$2
+com/silkimen/http/KeyChainKeyManager.java
+ com.silkimen.http.KeyChainKeyManager
+cordova/plugins/Diagnostic_Wifi.java
+ cordova.plugins.Diagnostic_Wifi
+com/silkimen/http/TLSConfiguration.java
+ com.silkimen.http.TLSConfiguration
+com/silkimen/cordovahttp/CordovaObservableCallbackContext.java
+ com.silkimen.cordovahttp.CordovaObservableCallbackContext
+org/apache/cordova/file/PendingRequests.java
+ org.apache.cordova.file.PendingRequests
+ org.apache.cordova.file.PendingRequests$1
+ org.apache.cordova.file.PendingRequests$Request
+org/apache/cordova/statusbar/StatusBar.java
+ org.apache.cordova.statusbar.StatusBar
+ org.apache.cordova.statusbar.StatusBar$1
+ org.apache.cordova.statusbar.StatusBar$2
+ org.apache.cordova.statusbar.StatusBar$3
+ org.apache.cordova.statusbar.StatusBar$4
+cc/fovea/PurchasePlugin.java
+ cc.fovea.PurchasePlugin
+ cc.fovea.PurchasePlugin$1
+ cc.fovea.PurchasePlugin$2
+ cc.fovea.PurchasePlugin$3
+com/silkimen/http/HttpRequest.java
+ com.silkimen.http.HttpRequest
+ com.silkimen.http.HttpRequest$1
+ com.silkimen.http.HttpRequest$2
+ com.silkimen.http.HttpRequest$3
+ com.silkimen.http.HttpRequest$4
+ com.silkimen.http.HttpRequest$5
+ com.silkimen.http.HttpRequest$6
+ com.silkimen.http.HttpRequest$7
+ com.silkimen.http.HttpRequest$8
+ com.silkimen.http.HttpRequest$Base64
+ com.silkimen.http.HttpRequest$CloseOperation
+ com.silkimen.http.HttpRequest$ConnectionFactory
+ com.silkimen.http.HttpRequest$ConnectionFactory$1
+ com.silkimen.http.HttpRequest$FlushOperation
+ com.silkimen.http.HttpRequest$HttpRequestException
+ com.silkimen.http.HttpRequest$Operation
+ com.silkimen.http.HttpRequest$RequestOutputStream
+ com.silkimen.http.HttpRequest$UploadProgress
+ com.silkimen.http.HttpRequest$UploadProgress$1
+org/apache/cordova/file/FileExistsException.java
+ org.apache.cordova.file.FileExistsException
+name/ratson/cordova/admob/AdMobConfig.java
+ name.ratson.cordova.admob.AdMobConfig
+com/silkimen/cordovahttp/CordovaClientAuth.java
+ com.silkimen.cordovahttp.CordovaClientAuth
+nl/xservices/plugins/FileProvider.java
+ nl.xservices.plugins.FileProvider
+org/apache/cordova/file/EncodingException.java
+ org.apache.cordova.file.EncodingException
+nl/xservices/plugins/ShareChooserPendingIntent.java
+ nl.xservices.plugins.ShareChooserPendingIntent
+com/plugin/gcm/OneSignalPush.java
+ com.plugin.gcm.OneSignalPush
+ com.plugin.gcm.OneSignalPush$1
+ com.plugin.gcm.OneSignalPush$2
+ com.plugin.gcm.OneSignalPush$3
+ com.plugin.gcm.OneSignalPush$4
+ com.plugin.gcm.OneSignalPush$5
+ com.plugin.gcm.OneSignalPush$6
+ com.plugin.gcm.OneSignalPush$7
+ com.plugin.gcm.OneSignalPush$8
+ com.plugin.gcm.OneSignalPush$9
+ com.plugin.gcm.OneSignalPush$CordovaNotificationOpenedHandler
+ com.plugin.gcm.OneSignalPush$CordovaNotificationReceivedHandler
+org/apache/cordova/file/AssetFilesystem.java
+ org.apache.cordova.file.AssetFilesystem
+com/silkimen/cordovahttp/CordovaHttpPlugin.java
+ com.silkimen.cordovahttp.CordovaHttpPlugin
+com/silkimen/cordovahttp/CordovaHttpDownload.java
+ com.silkimen.cordovahttp.CordovaHttpDownload
+br/com/innovatesoft/bibliantlh/MainActivity.java
+ com.phonegap.iindicate.MainActivity
+com/adobe/phonegap/push/PushConstants.java
+ com.adobe.phonegap.push.PushConstants
+name/ratson/cordova/admob/banner/BannerExecutor.java
+ name.ratson.cordova.admob.banner.BannerExecutor
+ name.ratson.cordova.admob.banner.BannerExecutor$1
+ name.ratson.cordova.admob.banner.BannerExecutor$2
+ name.ratson.cordova.admob.banner.BannerExecutor$3
+ name.ratson.cordova.admob.banner.BannerExecutor$4
+name/ratson/cordova/admob/AbstractExecutor.java
+ name.ratson.cordova.admob.AbstractExecutor
+cordova/plugins/Diagnostic_Bluetooth.java
+ cordova.plugins.Diagnostic_Bluetooth
+ cordova.plugins.Diagnostic_Bluetooth$1
+com/adobe/phonegap/push/PushDismissedHandler.java
+ com.adobe.phonegap.push.PushDismissedHandler
+com/silkimen/http/JsonUtils.java
+ com.silkimen.http.JsonUtils
+name/ratson/cordova/admob/interstitial/InterstitialListener.java
+ name.ratson.cordova.admob.interstitial.InterstitialListener
+cordova/plugins/Diagnostic_Notifications.java
+ cordova.plugins.Diagnostic_Notifications
+cordova/plugins/Diagnostic_NFC.java
+ cordova.plugins.Diagnostic_NFC
+ cordova.plugins.Diagnostic_NFC$1
+name/ratson/cordova/admob/rewardvideo/RewardVideoListener.java
+ name.ratson.cordova.admob.rewardvideo.RewardVideoListener
+com/silkimen/cordovahttp/CordovaServerTrust.java
+ com.silkimen.cordovahttp.CordovaServerTrust
+ com.silkimen.cordovahttp.CordovaServerTrust$1
+ com.silkimen.cordovahttp.CordovaServerTrust$2

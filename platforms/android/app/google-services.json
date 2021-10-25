@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "797563038542",
+    "project_id": "biblia-sagrada-ntlh---v1",
+    "storage_bucket": "biblia-sagrada-ntlh---v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797563038542:android:f7b3ebd712089f2861cc1f",
+        "android_client_info": {
+          "package_name": "com.phonegap.iindicate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797563038542-93r8gju8na0heqhigenhsi7sehkba0ma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB25iShRwtcOP6utP_JNRPCuHVegIg0Iss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797563038542-93r8gju8na0heqhigenhsi7sehkba0ma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7091486462236476~4229833281"
+    }
+  ],
+  "configuration_version": "1"
+}

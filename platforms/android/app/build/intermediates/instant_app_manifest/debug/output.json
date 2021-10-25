@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.phonegap.iindicate",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "INSTANT_APP_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 10020,
+        "versionName": "1.0.20",
+        "outputFile": "app-debug.apk",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.phonegap.iindicate",
+        "split": "",
+        "minSdkVersion": "19"
+      }
+    }
+  ]
+}

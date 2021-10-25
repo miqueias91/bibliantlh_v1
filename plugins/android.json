@@ -1,0 +1,81 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046",
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROID_SUPPORT_VERSION": "28.+",
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-purchase": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    }
+  }
+}
