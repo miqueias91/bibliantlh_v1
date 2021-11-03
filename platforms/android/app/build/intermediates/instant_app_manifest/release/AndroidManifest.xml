@@ -3,8 +3,8 @@
     package="com.phonegap.iindicate"
     android:hardwareAccelerated="true"
     android:targetSandboxVersion="2"
-    android:versionCode="10021"
-    android:versionName="1.0.21" >
+    android:versionCode="10022"
+    android:versionName="1.0.22" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -20,7 +20,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
 
@@ -32,8 +31,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.vending.BILLING" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+    <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
     <permission
         android:name="com.phonegap.iindicate.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
@@ -62,6 +60,9 @@
     <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"
@@ -92,24 +93,6 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7091486462236476~8144821046" />
-
-        <receiver
-            android:name="nl.xservices.plugins.ShareChooserPendingIntent"
-            android:enabled="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-            </intent-filter>
-        </receiver>
-
-        <provider
-            android:name="nl.xservices.plugins.FileProvider"
-            android:authorities="com.phonegap.iindicate.sharing.provider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/sharing_paths" />
-        </provider>
 
         <amazon:enable-feature
             xmlns:amazon="http://schemas.amazon.com/apk/res/android"

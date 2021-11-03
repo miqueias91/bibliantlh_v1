@@ -17,7 +17,7 @@
     "cordova-plugin-splashscreen": "^5.0.3",
     "cordova-plugin-statusbar": "~2.1.3",
     "cordova-plugin-whitelist": "~1.2.1",
-    "cordova-plugin-x-socialsharing": "5.6.4",
+    "cordova-plugin-x-socialsharing": "5.6.8",
     "cordova-promise-polyfill": "0.0.2",
     "cordova-support-google-services": "^1.3.2",
     "cordova.plugins.diagnostic": "^4.0.12",
@@ -46,7 +46,9 @@
         "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046"
       },
       "cordova-plugin-insomnia": {},
-      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-x-socialsharing": {
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+      },
       "cordova-plugin-purchase": {
         "BILLING_KEY": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnJLEPn/bUR8pGT5KAT6SH4cBXHAOZ88DM4jYhFsv3O3RRlonOrOT+VI4ErKyOSjsNGJxr+NJ07x8cn7J3J8tPBMURtMdaayg2+cEK/KNL4cvu+8wZrciA9Zr0zgx0vH0zRwCNnSqc5BKnaZSfZGTN135NpvbKGE4MRi/r5k2D4LFF7DALRQ7Eh1xhbC6v6XNxGBYI3klSpsfBMq+mlIJv4T4r4z6MYHaCMxrhHZv5pYXicO4NQegCq86Q5AHBTgo417pJPMurMb/1B1uhu1qW6kdyktlC8VUXWr5UmnI3w8GL1mBNA6GCapO6p8caXP1hSqPPuzsf6Kual4Rx3RKUwIDAQAB"
       },

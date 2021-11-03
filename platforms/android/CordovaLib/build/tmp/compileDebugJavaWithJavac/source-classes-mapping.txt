@@ -15,12 +15,12 @@ org/apache/cordova/CordovaPreferences.java
  org.apache.cordova.CordovaPreferences
 org/apache/cordova/engine/SystemExposedJsApi.java
  org.apache.cordova.engine.SystemExposedJsApi
+org/apache/cordova/CallbackMap.java
+ org.apache.cordova.CallbackMap
 org/apache/cordova/CordovaWebViewEngine.java
  org.apache.cordova.CordovaWebViewEngine
  org.apache.cordova.CordovaWebViewEngine$Client
  org.apache.cordova.CordovaWebViewEngine$EngineView
-org/apache/cordova/CallbackMap.java
- org.apache.cordova.CallbackMap
 org/apache/cordova/CordovaDialogsHelper.java
  org.apache.cordova.CordovaDialogsHelper
  org.apache.cordova.CordovaDialogsHelper$1
@@ -59,10 +59,10 @@ org/apache/cordova/ResumeCallback.java
  org.apache.cordova.ResumeCallback
 org/apache/cordova/BuildHelper.java
  org.apache.cordova.BuildHelper
-org/apache/cordova/Config.java
- org.apache.cordova.Config
 org/apache/cordova/engine/SystemWebView.java
  org.apache.cordova.engine.SystemWebView
+org/apache/cordova/Config.java
+ org.apache.cordova.Config
 org/apache/cordova/ExposedJsApi.java
  org.apache.cordova.ExposedJsApi
 org/apache/cordova/engine/SystemWebChromeClient.java
@@ -101,6 +101,8 @@ org/apache/cordova/Whitelist.java
  org.apache.cordova.Whitelist$URLPattern
 org/apache/cordova/PluginEntry.java
  org.apache.cordova.PluginEntry
+org/apache/cordova/ICordovaClientCertRequest.java
+ org.apache.cordova.ICordovaClientCertRequest
 org/apache/cordova/NativeToJsMessageQueue.java
  org.apache.cordova.NativeToJsMessageQueue
  org.apache.cordova.NativeToJsMessageQueue$BridgeMode
@@ -114,8 +116,6 @@ org/apache/cordova/NativeToJsMessageQueue.java
  org.apache.cordova.NativeToJsMessageQueue$OnlineEventsBridgeMode$1
  org.apache.cordova.NativeToJsMessageQueue$OnlineEventsBridgeMode$2
  org.apache.cordova.NativeToJsMessageQueue$OnlineEventsBridgeMode$OnlineEventsBridgeModeDelegate
-org/apache/cordova/ICordovaClientCertRequest.java
- org.apache.cordova.ICordovaClientCertRequest
 org/apache/cordova/CordovaHttpAuthHandler.java
  org.apache.cordova.CordovaHttpAuthHandler
 org/apache/cordova/CordovaWebView.java

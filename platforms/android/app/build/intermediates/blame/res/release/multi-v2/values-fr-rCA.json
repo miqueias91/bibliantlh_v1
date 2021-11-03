@@ -1,61 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\xampp\\htdocs\\biblia\\bibliantlh_v1\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "/var/www/html/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\b19fee8e0df0faf5c1b0afb6807c97c8\\appcompat-v7-27.1.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,1937",
-                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
-                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,2018"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,44",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,5428",
-                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
-                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,5509"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\89942aa027505c58e3ade23dd3bf94e1\\firebase-messaging-11.6.2\\res\\values-fr-rCA\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "100",
-                        "endOffsets": "347"
-                    },
-                    "to": {
-                        "startLines": "36",
-                        "startColumns": "4",
-                        "startOffsets": "4687",
-                        "endColumns": "104",
-                        "endOffsets": "4787"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\442c10f2caabfe74085c7c306694e15c\\support-compat-27.1.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "5514",
-                        "endColumns": "100",
-                        "endOffsets": "5610"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\cb030288a356491ab854f42d73421c49\\play-services-base-11.6.2\\res\\values-fr-rCA\\values.xml",
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/d87fd52342158b9c63aeea74328d50bf/transformed/play-services-base-11.6.2/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\f38179148f496d4b84c9437c6d7cc900\\play-services-ads-11.6.2\\res\\values-fr-rCA\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "241,318,442,508,573,664,779",
-                        "endColumns": "76,123,65,64,90,114,69",
-                        "endOffsets": "317,441,507,572,663,778,848"
-                    },
-                    "to": {
-                        "startLines": "37,38,39,40,41,42,43",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "4792,4873,5001,5071,5140,5235,5354",
-                        "endColumns": "80,127,69,68,94,118,73",
-                        "endOffsets": "4868,4996,5066,5135,5230,5349,5423"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Innovate Solft\\.gradle\\caches\\transforms-2\\files-2.1\\3f080e308b94b003cb760a3dbea7bd34\\play-services-basement-11.6.2\\res\\values-fr-rCA\\values.xml",
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/8f17e0b3cd5c79af5eb0d4dcf408d986/transformed/play-services-basement-11.6.2/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -103,6 +35,74 @@
                         "startOffsets": "3007",
                         "endColumns": "219",
                         "endOffsets": "3222"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/f26f3c3781bfc4de214656d747506cd0/transformed/firebase-messaging-11.6.2/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "100",
+                        "endOffsets": "347"
+                    },
+                    "to": {
+                        "startLines": "36",
+                        "startColumns": "4",
+                        "startOffsets": "4687",
+                        "endColumns": "104",
+                        "endOffsets": "4787"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/0384166ce916a9a602b11550a4c4134e/transformed/appcompat-v7-27.1.1/res/values-fr-rCA/values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,1937",
+                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
+                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,2018"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,44",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,331,442,529,645,775,858,938,1034,1144,1256,1359,1470,1577,1679,1838,5428",
+                        "endColumns": "110,114,110,86,115,129,82,79,95,109,111,102,110,106,101,158,98,85",
+                        "endOffsets": "211,326,437,524,640,770,853,933,1029,1139,1251,1354,1465,1572,1674,1833,1932,5509"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/7f518963a380899f34b1b3580c618fa9/transformed/support-compat-27.1.1/res/values-fr-rCA/values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "5514",
+                        "endColumns": "100",
+                        "endOffsets": "5610"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/d1b9f5250323251c670fa300a756718a/transformed/play-services-ads-11.6.2/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "241,318,442,508,573,664,779",
+                        "endColumns": "76,123,65,64,90,114,69",
+                        "endOffsets": "317,441,507,572,663,778,848"
+                    },
+                    "to": {
+                        "startLines": "37,38,39,40,41,42,43",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "4792,4873,5001,5071,5140,5235,5354",
+                        "endColumns": "80,127,69,68,94,118,73",
+                        "endOffsets": "4868,4996,5066,5135,5230,5349,5423"
                     }
                 }
             ]

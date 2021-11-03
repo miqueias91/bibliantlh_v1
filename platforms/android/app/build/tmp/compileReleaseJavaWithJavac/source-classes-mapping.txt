@@ -2,9 +2,6 @@ org/apache/cordova/file/InvalidModificationException.java
  org.apache.cordova.file.InvalidModificationException
 com/silkimen/cordovahttp/CordovaHttpResponse.java
  com.silkimen.cordovahttp.CordovaHttpResponse
-cordova/plugins/Diagnostic_Location.java
- cordova.plugins.Diagnostic_Location
- cordova.plugins.Diagnostic_Location$1
 org/apache/cordova/file/ContentFilesystem.java
  org.apache.cordova.file.ContentFilesystem
 org/apache/cordova/file/FileUtils.java
@@ -39,6 +36,9 @@ org/apache/cordova/file/FileUtils.java
  org.apache.cordova.file.FileUtils$8
  org.apache.cordova.file.FileUtils$9
  org.apache.cordova.file.FileUtils$FileOp
+cordova/plugins/Diagnostic_Location.java
+ cordova.plugins.Diagnostic_Location
+ cordova.plugins.Diagnostic_Location$1
 name/ratson/cordova/admob/interstitial/InterstitialExecutor.java
  name.ratson.cordova.admob.interstitial.InterstitialExecutor
  name.ratson.cordova.admob.interstitial.InterstitialExecutor$1
@@ -78,31 +78,18 @@ org/apache/cordova/dialogs/Notification.java
  org.apache.cordova.dialogs.Notification$6$1
 com/silkimen/http/TLSSocketFactory.java
  com.silkimen.http.TLSSocketFactory
-nl/xservices/plugins/SocialSharing.java
- nl.xservices.plugins.SocialSharing
- nl.xservices.plugins.SocialSharing$1
- nl.xservices.plugins.SocialSharing$1$1
- nl.xservices.plugins.SocialSharing$2
- nl.xservices.plugins.SocialSharing$2$1
- nl.xservices.plugins.SocialSharing$2$2
- nl.xservices.plugins.SocialSharing$2$2$1
- nl.xservices.plugins.SocialSharing$2$3
- nl.xservices.plugins.SocialSharing$3
- nl.xservices.plugins.SocialSharing$3$1
- nl.xservices.plugins.SocialSharing$4
- nl.xservices.plugins.SocialSharing$SocialSharingRunnable
 com/silkimen/http/HttpBodyDecoder.java
  com.silkimen.http.HttpBodyDecoder
 org/apache/cordova/whitelist/WhitelistPlugin.java
  org.apache.cordova.whitelist.WhitelistPlugin
  org.apache.cordova.whitelist.WhitelistPlugin$1
  org.apache.cordova.whitelist.WhitelistPlugin$CustomConfigXmlParser
-cc/fovea/Constants.java
- cc.fovea.Constants
-com/adobe/phonegap/push/FCMService.java
- com.adobe.phonegap.push.FCMService
 com/silkimen/cordovahttp/CordovaHttpBase.java
  com.silkimen.cordovahttp.CordovaHttpBase
+com/adobe/phonegap/push/FCMService.java
+ com.adobe.phonegap.push.FCMService
+cc/fovea/Constants.java
+ cc.fovea.Constants
 name/ratson/cordova/admob/AdMob.java
  name.ratson.cordova.admob.AdMob
 org/apache/cordova/file/Filesystem.java
@@ -144,13 +131,13 @@ org/apache/cordova/file/LocalFilesystem.java
  org.apache.cordova.file.LocalFilesystem
 cordova/plugins/Diagnostic_Camera.java
  cordova.plugins.Diagnostic_Camera
+name/ratson/cordova/admob/CordovaEventBuilder.java
+ name.ratson.cordova.admob.CordovaEventBuilder
 name/ratson/cordova/admob/rewardvideo/RewardVideoExecutor.java
  name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor
  name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$1
  name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$2
  name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$3
-name/ratson/cordova/admob/CordovaEventBuilder.java
- name.ratson.cordova.admob.CordovaEventBuilder
 org/apache/cordova/networkinformation/NetworkManager.java
  org.apache.cordova.networkinformation.NetworkManager
  org.apache.cordova.networkinformation.NetworkManager$1
@@ -223,12 +210,8 @@ name/ratson/cordova/admob/AdMobConfig.java
  name.ratson.cordova.admob.AdMobConfig
 com/silkimen/cordovahttp/CordovaClientAuth.java
  com.silkimen.cordovahttp.CordovaClientAuth
-nl/xservices/plugins/FileProvider.java
- nl.xservices.plugins.FileProvider
 org/apache/cordova/file/EncodingException.java
  org.apache.cordova.file.EncodingException
-nl/xservices/plugins/ShareChooserPendingIntent.java
- nl.xservices.plugins.ShareChooserPendingIntent
 com/plugin/gcm/OneSignalPush.java
  com.plugin.gcm.OneSignalPush
  com.plugin.gcm.OneSignalPush$1

@@ -36,10 +36,6 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.phonegap.iindicate"
     },
-    "cordova-plugin-x-socialsharing": {
-      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
-      "PACKAGE_NAME": "com.phonegap.iindicate"
-    },
     "cordova-promise-polyfill": {
       "PACKAGE_NAME": "com.phonegap.iindicate"
     },

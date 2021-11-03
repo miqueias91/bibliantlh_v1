@@ -76,14 +76,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-plugin-x-socialsharing.SocialSharing",
-    "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-    "pluginId": "cordova-plugin-x-socialsharing",
-    "clobbers": [
-      "window.plugins.socialsharing"
-    ]
-  },
-  {
     "id": "cordova.plugins.diagnostic.Diagnostic",
     "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
     "pluginId": "cordova.plugins.diagnostic",
@@ -472,7 +464,6 @@ module.exports.metadata =
   "cordova-plugin-statusbar": "2.1.3",
   "cordova-plugin-whitelist": "1.2.2",
   "es6-promise-plugin": "4.2.2",
-  "cordova-plugin-x-socialsharing": "5.6.4",
   "cordova-support-google-services": "1.3.2",
   "cordova.plugins.diagnostic": "4.0.12",
   "onesignal-cordova-plugin": "2.4.6",
