@@ -91,6 +91,14 @@ var lista_score = JSON.parse(localStorage.getItem('lista-score') || '[]');
 function maxArray(array) {
     return Math.max.apply(Math, array);
 };
+var optionBannerFB={
+  bannerid: config.bannerfb,
+  isTesting:false
+}
+var optionInterstitialFB={
+  interstitialid:config.interstitialfb,
+  isTesting:false
+}
 var admobid = {}
 if (/(android)/i.test(navigator.userAgent)) {
   admobid = {
@@ -225,6 +233,7 @@ var app = {
     else{
       fn.pushPage({'id': 'textoLivro.html', 'title': 'Gn||Gênesis||50||1'});
     }
+
   },
   oneSignal: function() {
     window.plugins.OneSignal
@@ -1098,6 +1107,7 @@ var app = {
     }
   },
   buscaNotificacoes: function(){
+    
     var id_user = window.localStorage.getItem('id_user');
     var playerID = window.localStorage.getItem('playerID');
 
@@ -1293,12 +1303,13 @@ var app = {
     window.plugins.insomnia.keepAwake();
     admob.banner.config({ 
       id: admobid.banner, 
-      isTesting: false, 
+      isTesting: false,
       autoShow: true, 
     })
 
     if (window.localStorage.getItem("versao_pro") === 'NAO') {
-      admob.banner.prepare()
+      admob.banner.prepare();
+      cordova.plugins.codeplayfacebookads.loadAndShowBannerAds(optionBannerFB);
     }
     
     admob.interstitial.config({
@@ -1754,6 +1765,28 @@ var app = {
         }
       }   
     }
+  },
+  interstitialSuccessFB: function(evt){
+    if(evt === "AdDisplayed"){
+       console.log("Facebook AdDisplayed");
+    }
+    else if(evt === "AdClosed"){
+       console.log("Facebook AdClosed");
+    }
+    else if(evt === "AdLoaded"){
+      if (window.localStorage.getItem("versao_pro") === 'NAO') {
+        cordova.plugins.codeplayfacebookads.showInterstitialAds(this.interstitialSuccessFB,this.interstitialFailFB);
+      }
+    }
+    else if(evt === "AdClicked"){
+       console.log("Facebook AdClicked");
+    }
+    else if(evt === "AdImpression"){
+       console.log("Facebook AdImpression");
+    }
+  },
+  interstitialFailFB: function(result){
+   console.log(result);
   }
 };
 

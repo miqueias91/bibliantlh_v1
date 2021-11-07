@@ -18,6 +18,12 @@
       "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046",
       "PACKAGE_NAME": "com.phonegap.iindicate"
     },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-codeplay-facebookads-free": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
     "cordova-plugin-console": {
       "PACKAGE_NAME": "com.phonegap.iindicate"
     },
@@ -34,6 +40,10 @@
       "PACKAGE_NAME": "com.phonegap.iindicate"
     },
     "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.phonegap.iindicate"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
       "PACKAGE_NAME": "com.phonegap.iindicate"
     },
     "cordova-promise-polyfill": {
@@ -54,24 +64,7 @@
     },
     "phonegap-plugin-multidex": {
       "PACKAGE_NAME": "com.phonegap.iindicate"
-    },
-    "phonegap-plugin-push": {
-      "FCM_VERSION": "11.6.2",
-      "PACKAGE_NAME": "com.phonegap.iindicate"
-    },
-    "cordova-plugin-purchase": {
-      "PACKAGE_NAME": "com.phonegap.iindicate"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.phonegap.iindicate"
-    },
-    "cordova-plugin-advanced-http": {
-      "PACKAGE_NAME": "com.phonegap.iindicate"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.phonegap.iindicate"
-    }
-  }
+  "dependent_plugins": {}
 }
