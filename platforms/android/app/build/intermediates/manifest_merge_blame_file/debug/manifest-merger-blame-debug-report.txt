@@ -2,8 +2,8 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.phonegap.iindicate"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10023"
-6    android:versionName="1.0.23" >
+5    android:versionCode="10024"
+6    android:versionName="1.0.24" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"

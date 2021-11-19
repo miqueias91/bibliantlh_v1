@@ -275,10 +275,6 @@
     <script type="text/javascript">
       var conta = window.localStorage.getItem('conta');
 
-      var i = Math.floor(Math.random() * (versiculos_do_dia.length));
-      app.buscaVersiculoDia(versiculos_do_dia[i],"versiculo_inicio");
-
-
       if (conta == 'google') {
         $("#tela_login_google").css("display","none");
       }
@@ -317,9 +313,8 @@
         </div>
 
     <script>
-      ons.getScriptPage().onInit = function () {      
+      ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
         $("#textoVersiculo").html('');
@@ -433,7 +428,6 @@
           };
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
@@ -801,7 +795,6 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
           admob.interstitial.show();
         }
         $("#textoVersiculo").html('');
@@ -855,7 +848,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           $("#textoCapitulosLidos").html('');
@@ -1262,7 +1254,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           fn.showDialog('modal-aguarde');
@@ -1732,9 +1723,8 @@
         <script>
           ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
-              admob.interstitial.show();
-            }
+            admob.interstitial.show();
+          }
             var dados = this.data.title.split('||'); 
             this.querySelector('#conteudoLivro_ div.center').textContent = dados[1];
             $("#conteudoLivro").html('');
@@ -1989,19 +1979,11 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-
               text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              window.plugins.socialsharing.shareViaWhatsApp(
-                text, 
-                null, 
-                null, 
-                function() {
-                  ons.notification.toast('Compartilhado no WhatsApp.', { buttonLabel: 'Ok', timeout: 2000 });
-                }, 
-                function(errormsg){
-                  ons.notification.toast('Não foi possível compartilhar.', { buttonLabel: 'Ok', timeout: 2000 });
-                }
-              )
+              cordova.plugins.clipboard.copy(text);
+              cordova.plugins.clipboard.paste(function (text) { 
+                ons.notification.toast('Copiado para a área de transferência, abra o WhatsApp e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+              });
             });
 
             $( ".compartilhar_instagram" ).click(function() {
@@ -2013,18 +1995,11 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-
               text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              window.plugins.socialsharing.shareViaInstagram(
-                text, 
-                null, 
-                function() {
-                  ons.notification.toast('Compartilhado no Instagram.', { buttonLabel: 'Ok', timeout: 2000 });
-                }, 
-                function(errormsg){
-                  ons.notification.toast('Não foi possível compartilhar.', { buttonLabel: 'Ok', timeout: 2000 });
-                }
-              )
+              cordova.plugins.clipboard.copy(text);
+              cordova.plugins.clipboard.paste(function (text) { 
+                ons.notification.toast('Copiado para a área de transferência, abra o Instagram e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+              });
             });
 
             $( ".compartilhar_twitter" ).click(function() {
@@ -2036,9 +2011,11 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-
               text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              window.plugins.socialsharing.shareViaTwitter(text);
+              cordova.plugins.clipboard.copy(text);
+              cordova.plugins.clipboard.paste(function (text) { 
+                ons.notification.toast('Copiado para a área de transferência, abra o Twitter e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+              });
             });
 
             $( ".cores" ).click(function() {
@@ -2099,7 +2076,6 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
@@ -2145,7 +2121,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           fn.showDialog('modal-aguarde');
@@ -2195,9 +2170,8 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
-          admob.interstitial.show();
-        }
+            admob.interstitial.show();
+          }
         this.querySelector('#notificacoes_ div.center').textContent = 'Notificações';
 
 
@@ -2486,7 +2460,6 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
         this.querySelector('#versoes_ div.center').textContent = 'Versões';
@@ -2849,7 +2822,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           fn.showDialog('modal-aguarde');
@@ -2917,7 +2889,6 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
             admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
@@ -2984,7 +2955,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
               admob.interstitial.show();
             }
             this.querySelector('#score_ div.center').textContent = 'Quiz Bíblico';
@@ -3029,7 +2999,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
               admob.interstitial.show();
             }
             this.querySelector('#score_ div.center').textContent = 'Max Score';
@@ -3093,7 +3062,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
               admob.interstitial.show();
             }
             this.querySelector('#score_ div.center').textContent = 'Ajuda';
@@ -3150,7 +3118,6 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
               admob.interstitial.show();
             }
             var dados = this.data.title.split('||'); 
@@ -3197,8 +3164,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           this.querySelector('#orientacaoConsolo_ div.center').textContent = 'Orientação e Consolo';
 
@@ -3260,8 +3226,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            cordova.plugins.codeplayfacebookads.loadInterstitialAds(optionInterstitialFB,app.interstitialSuccessFB,app.interstitialFailFB);
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           fn.showDialog('modal-aguarde');
           var dados = this.data.title.split('||'); 
