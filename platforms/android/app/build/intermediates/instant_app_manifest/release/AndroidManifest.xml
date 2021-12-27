@@ -3,8 +3,8 @@
     package="com.phonegap.iindicate"
     android:hardwareAccelerated="true"
     android:targetSandboxVersion="2"
-    android:versionCode="10028"
-    android:versionName="1.0.28" >
+    android:versionCode="10029"
+    android:versionName="1.0.29" >
 
     <uses-sdk
         android:minSdkVersion="19"
