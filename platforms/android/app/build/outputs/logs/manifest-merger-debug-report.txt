@@ -15,7 +15,6 @@ ADDED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/And
 INJECTED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml:2:1-68:12
 INJECTED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml:2:1-68:12
 INJECTED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml:2:1-68:12
-MERGED from [androidx.multidex:multidex:2.0.0] /home/miqueias/.gradle/caches/transforms-3/7fcf1526f0814805bd67f8210b1242e5/transformed/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/miqueias/.gradle/caches/transforms-3/c946ad59eba66659e0e35207fb832212/transformed/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/d4ca20ab7136a91af7bcefd8f72abb4b/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:2:1-107:12
 MERGED from [com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:2:1-31:12
@@ -278,8 +277,6 @@ uses-sdk
 INJECTED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml
 INJECTED from /var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml
-MERGED from [androidx.multidex:multidex:2.0.0] /home/miqueias/.gradle/caches/transforms-3/7fcf1526f0814805bd67f8210b1242e5/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] /home/miqueias/.gradle/caches/transforms-3/7fcf1526f0814805bd67f8210b1242e5/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/miqueias/.gradle/caches/transforms-3/c946ad59eba66659e0e35207fb832212/transformed/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/miqueias/.gradle/caches/transforms-3/c946ad59eba66659e0e35207fb832212/transformed/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/d4ca20ab7136a91af7bcefd8f72abb4b/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:5:5-44

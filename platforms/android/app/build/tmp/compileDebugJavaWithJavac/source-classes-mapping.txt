@@ -10,11 +10,8 @@ org/apache/cordova/splashscreen/SplashScreen.java
  org.apache.cordova.splashscreen.SplashScreen$6
  org.apache.cordova.splashscreen.SplashScreen$6$1
  org.apache.cordova.splashscreen.SplashScreen$7
-name/ratson/cordova/admob/rewardvideo/RewardVideoExecutor.java
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$1
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$2
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$3
+com/phonegap/iindicate/MainActivity.java
+ com.phonegap.iindicate.MainActivity
 cordova/plugin/codeplay/facebookads/free/codeplayfacebookads/codeplayfacebookads.java
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads$1
@@ -142,5 +139,8 @@ name/ratson/cordova/admob/rewardvideo/RewardVideoListener.java
  name.ratson.cordova.admob.rewardvideo.RewardVideoListener
 name/ratson/cordova/admob/CordovaEventBuilder.java
  name.ratson.cordova.admob.CordovaEventBuilder
-com/phonegap/iindicate/MainActivity.java
- com.phonegap.iindicate.MainActivity
+name/ratson/cordova/admob/rewardvideo/RewardVideoExecutor.java
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$1
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$2
+ name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$3
