@@ -3,12 +3,12 @@
     package="com.phonegap.iindicate"
     android:hardwareAccelerated="true"
     android:targetSandboxVersion="2"
-    android:versionCode="10030"
-    android:versionName="1.0.30" >
+    android:versionCode="10031"
+    android:versionName="1.0.31" >
 
     <uses-sdk
-        android:minSdkVersion="22"
-        android:targetSdkVersion="31" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30" />
 
     <supports-screens
         android:anyDensity="true"
@@ -70,6 +70,7 @@
     </queries>
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
