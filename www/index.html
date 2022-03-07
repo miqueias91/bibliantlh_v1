@@ -1506,6 +1506,9 @@
 
         <script>
           ons.getScriptPage().onInit = function () {
+            if (window.localStorage.getItem("versao_pro") === 'NAO') {
+              admob.interstitial.show();
+            }
             var dados = this.data.title.split('||'); 
             var ultimoCap = dados[2];
             this.querySelector('#textoLivro_ div.center').textContent = dados[1]+' '+dados[3];

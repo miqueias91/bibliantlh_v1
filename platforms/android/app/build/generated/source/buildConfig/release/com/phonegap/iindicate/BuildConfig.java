@@ -7,6 +7,6 @@ public final class BuildConfig {
   public static final boolean DEBUG = false;
   public static final String APPLICATION_ID = "com.phonegap.iindicate";
   public static final String BUILD_TYPE = "release";
-  public static final int VERSION_CODE = 10031;
-  public static final String VERSION_NAME = "1.0.31";
+  public static final int VERSION_CODE = 10032;
+  public static final String VERSION_NAME = "1.0.32";
 }

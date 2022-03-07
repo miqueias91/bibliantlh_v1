@@ -198,10 +198,20 @@ var app = {
           // alert(JSON.stringify(event))
         });
         document.addEventListener('admob.interstitial.events.LOAD', function(event) {
+          admob.interstitial.config({
+            id: admobid.interstitial,
+            isTesting: false,
+            autoShow: false,
+          })
           // alert(JSON.stringify(event))
           document.getElementsByClassName('showAd').disabled = false
         });
         document.addEventListener('admob.interstitial.events.CLOSE', function(event) {
+          admob.interstitial.config({
+            id: admobid.interstitial,
+            isTesting: false,
+            autoShow: false,
+          })
           // alert(JSON.stringify(event))
           admob.interstitial.prepare()
         });
@@ -211,12 +221,12 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        this.carregaPalavraDia();
         this.init();
-        this.carregaQuiz();
         this.firebase();
         this.oneSignal();
         this.getIds();
+        this.carregaPalavraDia();
+        this.carregaQuiz();
     },
     init: function() {
         var timeoutID = 0;
@@ -883,7 +893,7 @@ buscaHinario: function(id) {
     if (playerID && uid) {
       $.ajax({
         url: "https://www.innovatesoft.com.br/webservice/app/cadastraUser.php",
-        dataType: 'html',
+        dataType: 'json',
         type: 'POST',
         data: {
           'userId': playerID,
@@ -895,10 +905,34 @@ buscaHinario: function(id) {
           'versao': config.versao,
         },
         error: function(e) {
-          app.buscaDadosUsuario();
+          var final_versao_pro = this.dateTime();
+          window.localStorage.setItem("versao_pro", final_versao_pro);
+          app.admob();
+          app.buscaPalavraOrientacaoTopico();
+          app.buscaNotificacoes();
         },
         success: function(a) {
-          app.buscaDadosUsuario();
+          if (a) {
+            window.localStorage.setItem("id_user", a['id_user']);
+            window.localStorage.setItem("nome", a['nome']);
+            window.localStorage.setItem("usuario", a['usuario']);
+            window.localStorage.setItem("email", a['email']);
+            window.localStorage.setItem("celular", a['celular']);
+            window.localStorage.setItem("religiao", a['religiao']);
+            window.localStorage.setItem("conta", a['conta']);
+            if (a['final_versao_pro'] == null) {
+              a['final_versao_pro'] = 'NAO';
+              $("#btn_remover_anuncio").css("display","");
+            }
+            if (a['conta'] == 'google') {
+              $("#tela_home").css("display","");
+              $("#tela_login_google").css("display","none");
+            }
+            window.localStorage.setItem("versao_pro", a['final_versao_pro']);
+          }
+          app.admob();
+          app.buscaPalavraOrientacaoTopico();
+          app.buscaNotificacoes();
         },
       });
     }
@@ -1203,52 +1237,6 @@ buscaHinario: function(id) {
         }
         return false;
     },
-    buscaDadosUsuario: function() {
-        var uid = window.localStorage.getItem('uid');
-        var playerID = window.localStorage.getItem('playerID');
-
-        if (uid) {
-          $.ajax({
-            url: "https://www.innovatesoft.com.br/webservice/app/buscaDadosUsuario.php",
-            dataType: 'json',
-            type: 'POST',
-            data: {
-              'uid': uid,
-              'userId': playerID,
-            },
-            error: function(e) {
-              var final_versao_pro = this.dateTime();
-              window.localStorage.setItem("versao_pro", final_versao_pro);
-              app.admob();
-              app.buscaPalavraOrientacaoTopico();
-              app.buscaNotificacoes();
-            },
-            success: function(a) {
-              if (a) {
-                window.localStorage.setItem("id_user", a['id_user']);
-                window.localStorage.setItem("nome", a['nome']);
-                window.localStorage.setItem("usuario", a['usuario']);
-                window.localStorage.setItem("email", a['email']);
-                window.localStorage.setItem("celular", a['celular']);
-                window.localStorage.setItem("religiao", a['religiao']);
-                window.localStorage.setItem("conta", a['conta']);
-                if (a['final_versao_pro'] == null) {
-                  a['final_versao_pro'] = 'NAO';
-                  $("#btn_remover_anuncio").css("display","");
-                }
-                if (a['conta'] == 'google') {
-                  $("#tela_home").css("display","");
-                  $("#tela_login_google").css("display","none");
-                }
-                window.localStorage.setItem("versao_pro", a['final_versao_pro']);
-              }
-              app.admob();
-              app.buscaPalavraOrientacaoTopico();
-              app.buscaNotificacoes();
-            },
-          });
-        }
-    },
     admob: function(){
         window.plugins.insomnia.keepAwake();
         admob.banner.config({ 
@@ -1264,16 +1252,11 @@ buscaHinario: function(id) {
         admob.interstitial.config({
           id: admobid.interstitial,
           isTesting: false,
-          autoShow: false,
+          autoShow: true,
         })
 
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          admob.interstitial.prepare()
-        }
-
-        document.getElementsByClassName('showAd').disabled = true
-        document.getElementsByClassName('showAd').onclick = function() {
-          admob.interstitial.show()
+          admob.interstitial.prepare();
         }
     },
     firebase: function(){
