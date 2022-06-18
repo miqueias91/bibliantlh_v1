@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.iindicate" version="1.0.34" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <platform name="android">
+        <preference name="AndroidXEnabled" value="true" />
+    </platform>
     <feature name="AdMob">
         <param name="android-package" value="admob.plus.cordova.AdMob" />
     </feature>

@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "com.phonegap.iindicate",
         "split": "",
-        "minSdkVersion": "22"
+        "minSdkVersion": "19"
       }
     }
   ]

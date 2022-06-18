@@ -25,7 +25,7 @@
         priority="6"
         summary="Registered class is not instantiatable"
         explanation="Activities, services, broadcast receivers etc. registered in the manifest file (or for custom views, in a layout file) must be &quot;instantiatable&quot; by the system, which means that the class must be public, it must have an empty public constructor, and if it&apos;s an inner class, it must be a static inner class."
-        errorLine1="        &lt;receiver android:name=&quot;com.onesignal.ADMMessageHandler$Receiver&quot; android:permission=&quot;com.amazon.device.messaging.permission.SEND&quot;>"
+        errorLine1="        &lt;receiver android:name=&quot;com.onesignal.ADMMessageHandler$Receiver&quot; android:permission=&quot;com.amazon.device.messaging.permission.SEND&quot; android:exported=&quot;false&quot;>"
         errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/AndroidManifest.xml"
