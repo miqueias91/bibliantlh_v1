@@ -1,4 +1,4 @@
-#Sun Jan 23 08:45:48 BRT 2022
+#Fri Jun 17 19:43:12 BRT 2022
 base.2=/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_0.dex
 path.2=classes_0.dex
 base.1=/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex

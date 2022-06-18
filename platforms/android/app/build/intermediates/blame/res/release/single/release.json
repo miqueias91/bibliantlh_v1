@@ -24,12 +24,12 @@
         "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-port-xxhdpi/screen.png"
     },
     {
-        "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-land-hdpi_screen.png.flat",
-        "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-land-hdpi/screen.png"
-    },
-    {
         "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_stat_onesignal_default.png.flat",
         "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png"
+    },
+    {
+        "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-land-hdpi_screen.png.flat",
+        "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-land-hdpi/screen.png"
     },
     {
         "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/mipmap-ldpi_ic_launcher.png.flat",
@@ -92,11 +92,11 @@
         "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_stat_onesignal_default.png.flat",
-        "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-xhdpi/ic_stat_onesignal_default.png"
-    },
-    {
         "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-land-xxhdpi_screen.png.flat",
         "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-land-xxhdpi/screen.png"
+    },
+    {
+        "merged": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_stat_onesignal_default.png.flat",
+        "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/drawable-xhdpi/ic_stat_onesignal_default.png"
     }
 ]

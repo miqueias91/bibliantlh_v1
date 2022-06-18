@@ -53,7 +53,9 @@
       "id": "cordova.plugins.diagnostic@^4.0.12"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "ANDROID_SUPPORT_VERSION": "28.+"
+    }
   },
   "org.apache.cordova.geolocation": {
     "source": {
@@ -85,7 +87,9 @@
       "id": "cordova-plugin-x-socialsharing@5.6.8"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+    }
   },
   "es6-promise-plugin": {
     "source": {
@@ -125,16 +129,8 @@
       "id": "cordova-admob-sdk"
     },
     "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-admob-free": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-admob-free"
-    },
-    "is_top_level": true,
     "variables": {
-      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046"
+      "PLAY_SERVICES_VERSION": "11.0.4"
     }
   },
   "cordova-plugin-insomnia": {
@@ -176,5 +172,16 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "admob-plus-cordova": {
+    "source": {
+      "type": "registry",
+      "id": "admob-plus-cordova@1.27.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID_ANDROID": "ca-app-pub-7091486462236476~4229833281",
+      "PLAY_SERVICES_VERSION": "20.4.0"
+    }
   }
 }

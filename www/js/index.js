@@ -198,20 +198,10 @@ var app = {
           // alert(JSON.stringify(event))
         });
         document.addEventListener('admob.interstitial.events.LOAD', function(event) {
-          admob.interstitial.config({
-            id: admobid.interstitial,
-            isTesting: false,
-            autoShow: false,
-          })
           // alert(JSON.stringify(event))
           document.getElementsByClassName('showAd').disabled = false
         });
         document.addEventListener('admob.interstitial.events.CLOSE', function(event) {
-          admob.interstitial.config({
-            id: admobid.interstitial,
-            isTesting: false,
-            autoShow: false,
-          })
           // alert(JSON.stringify(event))
           admob.interstitial.prepare()
         });
@@ -1252,7 +1242,7 @@ buscaHinario: function(id) {
         admob.interstitial.config({
           id: admobid.interstitial,
           isTesting: false,
-          autoShow: true,
+          autoShow: false,
         })
 
         if (window.localStorage.getItem("versao_pro") === 'NAO') {

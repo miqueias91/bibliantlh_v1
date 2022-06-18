@@ -20,8 +20,6 @@
 package com.phonegap.iindicate;
 
 import android.os.Bundle;
-import android.util.Log;
-
 import org.apache.cordova.*;
 
 public class MainActivity extends CordovaActivity

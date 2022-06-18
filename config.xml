@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.iindicate" version="1.0.32" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.iindicate" version="1.0.34" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Bíblia Sagrada NTLH</name>
     <description>
         A Nova Tradução na Linguagem de Hoje, abreviadamente chamada NTLH, é uma tradução da Bíblia em linguagem moderna e inteligível em Língua Portuguesa. Foi lançada no ano 2000 pela Sociedade Bíblica do Brasil.
@@ -59,9 +59,6 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <plugin name="cordova-plugin-admob-free" spec="^0.27.0">
-        <variable name="ADMOB_APP_ID" value="ca-app-pub-7091486462236476~4229833281" />
-    </plugin>
     <plugin name="cordova-plugin-insomnia" spec="https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="^2.4.1" />
 </widget>
