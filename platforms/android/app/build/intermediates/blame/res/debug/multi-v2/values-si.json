@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml",
+            "outputFile": "/var/www/html/aplicativos/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml",
             "map": [
                 {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/9602a88656658a4de59f6d4ed78e4e5c/core-1.3.0/res/values-si/values-si.xml",

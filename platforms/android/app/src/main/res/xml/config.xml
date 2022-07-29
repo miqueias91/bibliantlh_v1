@@ -113,7 +113,7 @@
     <preference name="android-minSdkVersion" value="22" />
     <preference name="android-targetSdkVersion" value="31" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#333333" />
+    <preference name="StatusBarBackgroundColor" value="#212121" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
     <preference name="windows-appx-target" value="8.1-phone" />
     <preference name="WindowsToastCapable" value="true" />

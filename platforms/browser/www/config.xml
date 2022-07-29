@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.iindicate" version="1.0.38" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Bíblia Sagrada NTLH - V1</name>
+    <description>
+        A Nova Tradução na Linguagem de Hoje, abreviadamente chamada NTLH, é uma tradução da Bíblia em linguagem moderna e inteligível em Língua Portuguesa. Foi lançada no ano 2000 pela Sociedade Bíblica do Brasil.
+    </description>
+    <author email="miqueiasmcaetano@gmail.com" href="https://www.innovatesoft.com.br/">
+        Innovate Soft
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="^2.4.1" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-targetSdkVersion" value="30" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#333333" />
+    <preference name="StatusBarStyle" value="blacktranslucent" />
+    <preference name="windows-appx-target" value="8.1-phone" />
+    <preference name="WindowsToastCapable" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="android-build-tool" value="gradle" />
+</widget>

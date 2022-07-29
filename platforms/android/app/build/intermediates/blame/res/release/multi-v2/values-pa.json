@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-pa/values-pa.xml",
+            "outputFile": "/var/www/html/aplicativos/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-pa/values-pa.xml",
             "map": [
                 {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/8946ba11a19d46b7ec9b3940766a79e9/jetified-firebase-messaging-19.0.0/res/values-pa/values.xml",

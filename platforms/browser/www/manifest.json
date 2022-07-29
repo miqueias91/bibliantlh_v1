@@ -1,0 +1,13 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Bíblia Sagrada NTLH - V1",
+  "short_name": "Bíblia Sagrada NTLH - V1",
+  "version": "com.phonegap.iindicate",
+  "description": "A Nova Tradução na Linguagem de Hoje, abreviadamente chamada NTLH, é uma tradução da Bíblia em linguagem moderna e inteligível em Língua Portuguesa. Foi lançada no ano 2000 pela Sociedade Bíblica do Brasil.",
+  "author": "Innovate Soft",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "index.html",
+  "theme_color": "#333333"
+}

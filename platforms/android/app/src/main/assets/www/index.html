@@ -6,14 +6,15 @@
     <meta name="mobile-web-app-capable" content="yes" />
 
     <!-- CSS dependencies -->
-    <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
-    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/onsenui/onsenui.min.css">
+    <link rel="stylesheet" href="css/onsenui/onsenui-fonts.css">
+    <link rel="stylesheet" href="css/onsenui/onsenui-core.min.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <!-- JS dependencies (order matters!) -->
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="js/onsenui/onsenui.min.js"></script>
     <script type="text/javascript" src="lib/SocialSharing/SocialSharing.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
@@ -42,7 +43,7 @@
         <div class="center"><center id="tituloApp">Bíblia Sagrada</center></div>
       <div class="left">
         <ons-toolbar-button onclick="fn.toggleMenu()">
-          <ons-icon style="color: #f5f5f5" icon="ion-navicon, material:md-menu"></ons-icon>
+          <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
         </ons-toolbar-button>
       </div>
     </ons-toolbar>
@@ -190,7 +191,6 @@
     <style>
       .profile-pic {
         width: 100%;
-        background-color: #333;
         margin: 0 auto;
       }
 
@@ -220,9 +220,9 @@
 
 <template id="home.html">
   <ons-page>
-    <section style="text-align:left;border-bottom: 1px solid #ccc;background-color: #fff;">
-        <div id="versiculo_inicio"></div>
-    </section>
+    <ons-card>
+      <div id="versiculo_inicio"></div>
+    </ons-card>
 
     <section style="margin: 16px" id="tela_login_google">
       <br><br>
@@ -231,19 +231,19 @@
     </section>
     <br>
     <section id="tela_home">
-      <ons-card onclick="fn.pushPage({'id': 'biblia.html', 'title': 'Bíblia Sagrada'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+      <ons-card onclick="fn.pushPage({'id': 'biblia.html', 'title': 'Bíblia Sagrada'})" style="padding: 1px;">
         <div class="title titulo_menu"><i class="fas fa-book-open"></i><br>Ler a Bíblia</div>
       </ons-card>
 
       <ons-row>
           <ons-col>
-              <ons-card onclick="fn.pushPage({'id': 'hinario.html', 'title': 'Hinários'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+              <ons-card onclick="fn.pushPage({'id': 'hinario.html', 'title': 'Hinários'})" style="padding: 1px;">
                 <div class="title titulo_menu" style="font-size: 15px!important;"><i class="fas fa-music"></i><br>Hinários</div>
               </ons-card>
           </ons-col>
    
           <ons-col>
-              <ons-card onclick="fn.pushPage({'id': 'quizbiblico.html', 'title': 'Quiz Bíblico'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+              <ons-card onclick="fn.pushPage({'id': 'quizbiblico.html', 'title': 'Quiz Bíblico'})" style="padding: 1px;">
                 <div class="title titulo_menu" style="font-size: 15px!important;"><i class="fas fa-play"></i><br>Quiz</div>
               </ons-card>
           </ons-col>
@@ -251,7 +251,7 @@
 
       <ons-row>
         <ons-col>
-          <ons-card style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+          <ons-card style="padding: 1px;">
             <div class="title titulo_menu" style="font-size: 15px!important;">Rádio Online<br><br>
               <audio controls>
                 <source src="https://server2.webradios.com.br:19222/9222" type="audio/mpeg">                
@@ -263,19 +263,19 @@
 
       <ons-row>
           <ons-col>
-              <ons-card onclick="fn.loadLink('https://www.cristaonarede.com.br/')" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+              <ons-card onclick="fn.loadLink('https://www.cristaonarede.com.br/')" style="padding: 1px;">
                 <div class="title titulo_menu" style="font-size: 15px!important;"><i class="fas fa-globe"></i><br>Cristão Na Rede</div>
               </ons-card>
           </ons-col>
    
           <ons-col>
-              <ons-card onclick="fn.pushPage({'id': 'ajustes.html', 'title': 'Ajustes'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+              <ons-card onclick="fn.pushPage({'id': 'ajustes.html', 'title': 'Ajustes'})" style="padding: 1px;">
                 <div class="title titulo_menu" style="font-size: 15px!important;"><i class="fas fa-cogs"></i><br>Ajustes de Leitura</div>
               </ons-card>
           </ons-col>
       </ons-row>
 
-      <ons-card onclick="fn.pushPage({'id': 'faleConosco.html', 'title': 'Fale Conosco'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+      <ons-card onclick="fn.pushPage({'id': 'faleConosco.html', 'title': 'Fale Conosco'})" style="padding: 1px;">
         <div class="title titulo_menu"><i class="fas fa-headset"></i><br>Fale Conosco</div>
       </ons-card>
     </section>
@@ -293,6 +293,7 @@
       .card__title,
       .card--material__title {
         font-size: 20px;
+        text-align: center;
       }
     </style>
     <script type="text/javascript">
@@ -316,7 +317,7 @@
           message: 'Assista aos vídeos e acumule pontos, ao acumular 100 pontos ganhe 7 dias sem anúncios.',
           buttonLabels: ['Assistir e acumular','Cancelar'],
           callback: function (index) {
-            if (1 == index) {
+            if (0 == index) {
               anuncioAdmobRewarded();
             }
           }
@@ -465,6 +466,7 @@
 
           $( "#modo_noturno" ).click(function() {
             localStorage.setItem("modo-noturno",$("#modo_noturno").prop( "checked" ));
+            location.href = 'index.html';
           });
         }
     </script>
@@ -644,13 +646,9 @@
       .card--material__title {
         font-size: 20px;
       }
-      .profile-pic {
-        background-color: transparent;
-      }
      .profile-pic > img {
         width: 50px!important;
         height: auto!important;
-        background-color: transparent;
         margin: 0 auto;
         padding: 0!important;
         border-radius: 20px;
@@ -930,16 +928,16 @@
       <div class="right"></div>
     </ons-toolbar>
 
-      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'harpa.html', 'title': 'Harpa Cristã'})">
-          <div class="title" style="color: #F5F5F5;">Harpa Cristã</div>
+      <ons-card onclick="fn.pushPage({'id': 'harpa.html', 'title': 'Harpa Cristã'})">
+          <div class="title">Harpa Cristã</div>
       </ons-card>
 
-      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'cantor.html', 'title': 'Cantor Cristão'})">
-          <div class="title" style="color: #F5F5F5;">Cantor Cristão</div>
+      <ons-card onclick="fn.pushPage({'id': 'cantor.html', 'title': 'Cantor Cristão'})">
+          <div class="title">Cantor Cristão</div>
       </ons-card>
 
-      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'listaFavoritosHinario.html', 'title': 'Favoritos'})">
-          <div class="title" style="color: #F5F5F5;">Favoritos</div>
+      <ons-card onclick="fn.pushPage({'id': 'listaFavoritosHinario.html', 'title': 'Favoritos'})">
+          <div class="title">Favoritos</div>
       </ons-card>
 
     <script>
@@ -977,7 +975,7 @@
       <div class="left">
           <ons-back-button>Bíblia Sagrada</ons-back-button>
       </div>
-      <div class="right" id="botao_pesquisa_biblia" style="color: #f5f5f5;margin-right: 16px;"><ons-icon icon="fa-search"></ons-icon></div>
+      <div class="right" id="botao_pesquisa_biblia" style="margin-right: 16px;"><ons-icon icon="fa-search"></ons-icon></div>
     </ons-toolbar>
       <p style="text-align: center; margin: 0 0 10px 0;display: none;" id="pesquisa_biblia">
       <ons-search-input style="width: 100%;"
@@ -988,15 +986,15 @@
       ></ons-search-input>
     </p>
     <div style="display: ;" id="opcao_biblia">
-      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'antigoTestamento.html', 'title': 'Antigo Testamento'})">
-          <div class="title" style="color: #F5F5F5;">Antigo Testamento</div>
+      <ons-card onclick="fn.pushPage({'id': 'antigoTestamento.html', 'title': 'Antigo Testamento'})">
+          <div class="title">Antigo Testamento</div>
       </ons-card>
-      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'novoTestamento.html', 'title': 'Novo Testamento'})">
-          <div class="title" style="color: #F5F5F5;">Novo Testamento</div>
+      <ons-card onclick="fn.pushPage({'id': 'novoTestamento.html', 'title': 'Novo Testamento'})">
+          <div class="title">Novo Testamento</div>
       </ons-card>
 
-      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'planoLeitura.html', 'title': 'Plano de Leitura'})">
-          <div class="title" style="color: #F5F5F5;">Plano de Leitura</div>
+      <ons-card onclick="fn.pushPage({'id': 'planoLeitura.html', 'title': 'Plano de Leitura'})">
+          <div class="title">Plano de Leitura</div>
       </ons-card>
     </div>
 
@@ -1058,7 +1056,7 @@
             <ons-back-button>Harpa Cristã</ons-back-button>
         </div>
         <div class="center"></div>
-        <div class="right" id="botao_pesquisa_harpa" style="color: #f5f5f5;margin-right: 16px;"><ons-icon icon="fa-search"></ons-icon></div>
+        <div class="right" id="botao_pesquisa_harpa" style="margin-right: 16px;"><ons-icon icon="fa-search"></ons-icon></div>
     </ons-toolbar>
     <p style="text-align: center; margin: 0 0 10px 0;display: none;" id="pesquisa_harpa">
         <ons-search-input style="width: 100%;"
@@ -1450,7 +1448,7 @@
         <div class="center"></div>
         <div class="right">
           
-          <span id="rolagem" style="color: #f5f5f5;margin-right: 10px;font-size: 15px!important;">Rolagem</span>
+          <span id="rolagem" style="margin-right: 10px;font-size: 15px!important;">Rolagem</span>
         </div>
       </ons-toolbar>
 
@@ -1493,7 +1491,7 @@
       </ons-fab>
 
       <ons-fab class="botao_controle" position="bottom center" style="bottom: 75px;" onclick="exibirVersoesBiblia()">
-        <span id="versaoBiblia" style="color: #f5f5f5;font-size: 15px!important;text-transform: uppercase;"></span>
+        <span id="versaoBiblia" style="font-size: 15px!important;text-transform: uppercase;"></span>
       </ons-fab>
 
       <ons-fab class="botao_controle" position="bottom left" style="bottom: 75px;" id="anterior">
@@ -1521,237 +1519,239 @@
 
 
 
-        <script>
-          ons.getScriptPage().onInit = function () {
-            if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              // anuncioAdmobInterstitial();
-            }
-            var dados = this.data.title.split('||'); 
-            var ultimoCap = dados[2];
-            this.querySelector('#textoLivro_ div.center').textContent = dados[1]+' '+dados[3];
-            //CHAMA DA FUNÇÃO PARA ABRIR MODAL
-            fn.showDialog('modal-aguarde');
-            var versaoId = window.localStorage.getItem('versao-biblia');
-            $("#versaoBiblia").html(versaoId);
+                <script>
+                  ons.getScriptPage().onInit = function () {
+                    var dados = this.data.title.split('||'); 
+                    var ultimoCap = dados[2];
+                    this.querySelector('#textoLivro_ div.center').textContent = dados[1]+' '+dados[3];
+                    //CHAMA DA FUNÇÃO PARA ABRIR MODAL
+                    fn.showDialog('modal-aguarde');
+                    var versaoId = window.localStorage.getItem('versao-biblia');
+                    $("#versaoBiblia").html(versaoId);
 
-            app.buscaTexto(versaoId,dados[0],dados[3], dados[1]);
-            
-            var timeoutID = 0;
-            clearTimeout(timeoutID);
-            timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
+                    app.buscaTexto(versaoId,dados[0],dados[3], dados[1]);
+                    
+                    var timeoutID = 0;
+                    clearTimeout(timeoutID);
+                    timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
 
-            document.getElementById('velocidade').addEventListener('input', function (event) {
-              velocidade = 0;
-              velocidade = parseInt(event.target.value);
-            });
+                    document.getElementById('velocidade').addEventListener('input', function (event) {
+                      velocidade = 0;
+                      velocidade = parseInt(event.target.value);
+                    });
 
-            exibirVersoesBiblia = function () {
-              ons.openActionSheet({
-                title: 'Selecione uma versão',
-                cancelable: true,
-                buttons: [
-                  'Bíblia Sagrada AA',
-                  'Bíblia Sagrada NVI',
-                  'Bíblia Sagrada ACF',
-                  'Bíblia Sagrada ARC',
-                  'Bíblia Sagrada Viva',
-                  'Bíblia Sagrada NTLH',
-                  'Bíblia Sagrada KJA (PT)',
-                  {
-                    label: 'Cancelar',
-                    icon: 'md-close'
+                    exibirVersoesBiblia = function () {
+                      ons.openActionSheet({
+                        title: 'Selecione uma versão',
+                        cancelable: true,
+                        buttons: [
+                          'Bíblia Sagrada AA',
+                          'Bíblia Sagrada NVI',
+                          'Bíblia Sagrada ACF',
+                          'Bíblia Sagrada ARC',
+                          'Bíblia Sagrada Viva',
+                          'Bíblia Sagrada NTLH',
+                          'Bíblia Sagrada KJA (PT)',
+                          {
+                            label: 'Cancelar',
+                            icon: 'md-close'
+                          }
+                        ]
+                      }).then(function (index) {
+                        var arrayVersoes = ['aa', 'nvi', 'acf', 'arc', 'viva', 'ntlh', 'pt_kja',''];
+                        if (arrayVersoes[index] != '' && index >= 0 && versaoId != arrayVersoes[index]) {
+                          versaoId = arrayVersoes[index];
+                          localStorage.setItem("versao-biblia", versaoId); 
+                          app.buscaTexto(versaoId,dados[0],dados[3], dados[1]);
+                          $("#versaoBiblia").html(versaoId);
+                        }
+                      });
+                    };
+
+                    $("#atual").val(dados[3]);
+
+                    $( "#rolagem" ).click(function() {
+                      if (rolagem == 0) {
+                        $("#controle_rolagem").css("display","");
+                        velocidade = 30;
+                        $("#velocidade").val(velocidade);
+                        rolagem = 1;
+                        app.rolar();
+                      }
+                    });
+
+                    $( "#pausar_rolagem" ).click(function() {
+                      if (pausar == 0) {
+                        tmp_velocidade = velocidade;
+                        velocidade = 0;
+                        pausar = 1;
+                        $("#pause").css("display","none");
+                        $("#play").css("display","");
+                      }
+                      else{
+                        velocidade = tmp_velocidade;
+                        pausar = 0;
+                        $("#pause").css("display","");
+                        $("#play").css("display","none");
+                        app.rolar();
+                      }
+                    });
+
+                    $( "#fechar_rolagem" ).click(function() {
+                      velocidade = 0;
+                      rolagem = 0;
+                      $("#controle_rolagem").css("display","none");
+                    });
+
+                    $( "#proximo" ).click(function() {
+                      if (parseInt($("#atual").val()) < parseInt(ultimoCap)) {
+                        inicioLeitura = 0;
+                        velocidade = 0;
+                        pausar = 0;
+                        rolagem = 0;
+
+                        $("#controle_rolagem").css("display","none");
+
+                        $("#atual").val(parseInt($("#atual").val())+1)
+                        //CHAMA DA FUNÇÃO PARA ABRIR MODAL
+                        fn.showDialog('modal-aguarde');
+                        var versaoId = window.localStorage.getItem('versao-biblia');
+                        app.buscaTexto(versaoId,dados[0],parseInt($("#atual").val()), dados[1]);
+                        $('#textoLivro_ div.center').html(dados[1]+' '+parseInt($("#atual").val()));
+                        var timeoutID = 0;
+                        clearTimeout(timeoutID);
+                        timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
+                      }      
+                    });
+
+                    $( "#anterior" ).click(function() {
+                      if (parseInt($("#atual").val()) > 1) {
+                        inicioLeitura = 0;
+                        velocidade = 0;
+                        pausar = 0;
+                        rolagem = 0;
+
+                        $("#controle_rolagem").css("display","none");
+                        $("#atual").val(parseInt($("#atual").val())-1)
+                        //CHAMA DA FUNÇÃO PARA ABRIR MODAL
+                        fn.showDialog('modal-aguarde');
+                        var versaoId = window.localStorage.getItem('versao-biblia');
+                        app.buscaTexto(versaoId,dados[0],parseInt($("#atual").val()), dados[1]);
+                        $('#textoLivro_ div.center').html(dados[1]+' '+parseInt($("#atual").val()));
+                        var timeoutID = 0;
+                        clearTimeout(timeoutID);
+                        timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
+                      }      
+                    });
+
+                    $( ".copiar" ).click(function() {
+                      var text = '';
+                      $("[marcado=1]").each(function() {
+                        var txt_versiculo = $(this).text().substr(2);
+                        var livro = $(this).attr('livro');
+                        var num_capitulo = $(this).attr('num_capitulo');
+                        var num_versiculo = parseInt($(this).attr('num_versiculo'));
+                        text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
+                      });
+                      text += 'Versão: '+config.titulo+'\nLink: '+config.url;
+                      cordova.plugins.clipboard.copy(text);
+                      cordova.plugins.clipboard.paste(function (text) { 
+                        ons.notification.toast('Copiado para a área de transferência.', { buttonLabel: 'Ok', timeout: 2000 });
+                      });
+                      //cordova.plugins.clipboard.clear();
+                    });
+
+                    $( ".compartilhar_whatsapp" ).click(function() {
+                      var text = '';
+                      $("[marcado=1]").each(function() {
+                        var txt_versiculo = $(this).text().substr(2);
+                        var livro = $(this).attr('livro');
+                        var num_capitulo = $(this).attr('num_capitulo');
+                        var num_versiculo = parseInt($(this).attr('num_versiculo'));
+                        text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
+                      });
+                      text += 'Versão: '+config.titulo+'\nLink: '+config.url;
+                      cordova.plugins.clipboard.copy(text);
+                      cordova.plugins.clipboard.paste(function (text) { 
+                        ons.notification.toast('Copiado para a área de transferência, abra o WhatsApp e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+                      });
+                    });
+
+                    $( ".compartilhar_instagram" ).click(function() {
+                      var text = '';
+                      $("[marcado=1]").each(function() {
+                        var txt_versiculo = $(this).text().substr(2);
+                        var livro = $(this).attr('livro');
+                        var num_capitulo = $(this).attr('num_capitulo');
+                        var num_versiculo = parseInt($(this).attr('num_versiculo'));
+                        text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
+                      });
+                      text += 'Versão: '+config.titulo+'\nLink: '+config.url;
+                      cordova.plugins.clipboard.copy(text);
+                      cordova.plugins.clipboard.paste(function (text) { 
+                        ons.notification.toast('Copiado para a área de transferência, abra o Instagram e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+                      });
+                    });
+
+                    $( ".compartilhar_twitter" ).click(function() {
+                      var text = '';
+                      $("[marcado=1]").each(function() {
+                        var txt_versiculo = $(this).text().substr(2);
+                        var livro = $(this).attr('livro');
+                        var num_capitulo = $(this).attr('num_capitulo');
+                        var num_versiculo = parseInt($(this).attr('num_versiculo'));
+                        text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
+                      });
+                      text += 'Versão: '+config.titulo+'\nLink: '+config.url;
+                      cordova.plugins.clipboard.copy(text);
+                      cordova.plugins.clipboard.paste(function (text) { 
+                        ons.notification.toast('Copiado para a área de transferência, abra o Twitter e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+                      });
+                    });
+
+                    $( ".cores" ).click(function() {
+                      marcado = $(this).attr('marcado');
+                      var cor = $(this).attr('id');
+                      var livro = $('#'+id).attr('livro');
+                      var num_capitulo = $('#'+id).attr('num_capitulo');
+                      var num_versiculo = $('#'+id).attr('num_versiculo');
+                
+                      if (marcado==0) {
+                        $('#'+id).attr('marcado',1);
+                        $('#'+id).attr('txt_marcado',0);
+                        $(".botao_controle").css("display","none");
+                        $(".cores").css("display","");
+                        lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos'));
+                        app.retirarMarcadorVersiculo(livro, num_capitulo, num_versiculo, lista_versiculos);
+                      }
+                      else{
+                        $(".copiar").css("display","none");
+                        $(".compartilha").css("display","none");
+                        id = $("[marcado=1]").attr('id');
+                        $("#"+id).attr('marcado',0);
+                        $('#'+id).attr('txt_marcado',1);
+                        $(".cores").css("display","none");
+                        $(".botao_controle").css("display","");
+                        $('#'+id).removeClass( "grey" ).addClass(cor);
+                        var livro = $('#'+id).attr('livro');
+                        var num_capitulo = $('#'+id).attr('num_capitulo');
+                        var num_versiculo = $('#'+id).attr('num_versiculo');
+
+                        var lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
+                        if(livro && num_capitulo && num_versiculo){
+                            lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
+                            localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
+                        }
+                        usar_cores = 0;
+
+                      }      
+                    });
+
+                    $( "#banck_textoLivro" ).click(function() {
+                      app.buscarVersiculosMarcados();
+                    });
                   }
-                ]
-              }).then(function (index) {
-                var arrayVersoes = ['aa', 'nvi', 'acf', 'arc', 'viva', 'ntlh', 'pt_kja',''];
-                if (arrayVersoes[index] != '' && index >= 0 && versaoId != arrayVersoes[index]) {
-                  versaoId = arrayVersoes[index];
-                  localStorage.setItem("versao-biblia", versaoId); 
-                  app.buscaTexto(versaoId,dados[0],dados[3], dados[1]);
-                  $("#versaoBiblia").html(versaoId);
-                }
-              });
-            };
-
-            $("#atual").val(dados[3]);
-
-            $( "#rolagem" ).click(function() {
-              if (rolagem == 0) {
-                $("#controle_rolagem").css("display","");
-                velocidade = 30;
-                $("#velocidade").val(velocidade);
-                rolagem = 1;
-                app.rolar();
-              }
-            });
-
-            $( "#pausar_rolagem" ).click(function() {
-              if (pausar == 0) {
-                tmp_velocidade = velocidade;
-                velocidade = 0;
-                pausar = 1;
-                $("#pause").css("display","none");
-                $("#play").css("display","");
-              }
-              else{
-                velocidade = tmp_velocidade;
-                pausar = 0;
-                $("#pause").css("display","");
-                $("#play").css("display","none");
-                app.rolar();
-              }
-            });
-
-            $( "#fechar_rolagem" ).click(function() {
-              velocidade = 0;
-              rolagem = 0;
-              $("#controle_rolagem").css("display","none");
-            });
-
-            $( "#proximo" ).click(function() {
-              if (parseInt($("#atual").val()) < parseInt(ultimoCap)) {
-                inicioLeitura = 0;
-                velocidade = 0;
-                pausar = 0;
-                rolagem = 0;
-
-                $("#controle_rolagem").css("display","none");
-
-                $("#atual").val(parseInt($("#atual").val())+1)
-                //CHAMA DA FUNÇÃO PARA ABRIR MODAL
-                fn.showDialog('modal-aguarde');
-                var versaoId = window.localStorage.getItem('versao-biblia');
-                app.buscaTexto(versaoId,dados[0],parseInt($("#atual").val()), dados[1]);
-                $('#textoLivro_ div.center').html(dados[1]+' '+parseInt($("#atual").val()));
-                var timeoutID = 0;
-                clearTimeout(timeoutID);
-                timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
-              }      
-            });
-
-            $( "#anterior" ).click(function() {
-              if (parseInt($("#atual").val()) > 1) {
-                inicioLeitura = 0;
-                velocidade = 0;
-                pausar = 0;
-                rolagem = 0;
-
-                $("#controle_rolagem").css("display","none");
-                $("#atual").val(parseInt($("#atual").val())-1)
-                //CHAMA DA FUNÇÃO PARA ABRIR MODAL
-                fn.showDialog('modal-aguarde');
-                var versaoId = window.localStorage.getItem('versao-biblia');
-                app.buscaTexto(versaoId,dados[0],parseInt($("#atual").val()), dados[1]);
-                $('#textoLivro_ div.center').html(dados[1]+' '+parseInt($("#atual").val()));
-                var timeoutID = 0;
-                clearTimeout(timeoutID);
-                timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
-              }      
-            });
-
-            $( ".copiar" ).click(function() {
-              var text = '';
-              $("[marcado=1]").each(function() {
-                var txt_versiculo = $(this).text().substr(2);
-                var livro = $(this).attr('livro');
-                var num_capitulo = $(this).attr('num_capitulo');
-                var num_versiculo = parseInt($(this).attr('num_versiculo'));
-                text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
-              });
-              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              cordova.plugins.clipboard.copy(text);
-              cordova.plugins.clipboard.paste(function (text) { 
-                ons.notification.toast('Copiado para a área de transferência.', { buttonLabel: 'Ok', timeout: 2000 });
-              });
-              //cordova.plugins.clipboard.clear();
-            });
-
-            $( ".compartilhar_whatsapp" ).click(function() {
-              var text = '';
-              $("[marcado=1]").each(function() {
-                var txt_versiculo = $(this).text().substr(2);
-                var livro = $(this).attr('livro');
-                var num_capitulo = $(this).attr('num_capitulo');
-                var num_versiculo = parseInt($(this).attr('num_versiculo'));
-                text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
-              });
-              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              cordova.plugins.clipboard.copy(text);
-              cordova.plugins.clipboard.paste(function (text) { 
-                ons.notification.toast('Copiado para a área de transferência, abra o WhatsApp e cole.', { buttonLabel: 'Ok', timeout: 2000 });
-              });
-            });
-
-            $( ".compartilhar_instagram" ).click(function() {
-              var text = '';
-              $("[marcado=1]").each(function() {
-                var txt_versiculo = $(this).text().substr(2);
-                var livro = $(this).attr('livro');
-                var num_capitulo = $(this).attr('num_capitulo');
-                var num_versiculo = parseInt($(this).attr('num_versiculo'));
-                text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
-              });
-              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              cordova.plugins.clipboard.copy(text);
-              cordova.plugins.clipboard.paste(function (text) { 
-                ons.notification.toast('Copiado para a área de transferência, abra o Instagram e cole.', { buttonLabel: 'Ok', timeout: 2000 });
-              });
-            });
-
-            $( ".compartilhar_twitter" ).click(function() {
-              var text = '';
-              $("[marcado=1]").each(function() {
-                var txt_versiculo = $(this).text().substr(2);
-                var livro = $(this).attr('livro');
-                var num_capitulo = $(this).attr('num_capitulo');
-                var num_versiculo = parseInt($(this).attr('num_versiculo'));
-                text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
-              });
-              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              cordova.plugins.clipboard.copy(text);
-              cordova.plugins.clipboard.paste(function (text) { 
-                ons.notification.toast('Copiado para a área de transferência, abra o Twitter e cole.', { buttonLabel: 'Ok', timeout: 2000 });
-              });
-            });
-
-            $( ".cores" ).click(function() {
-              marcado = $(this).attr('marcado');
-              var cor = $(this).attr('id');
-              var livro = $('#'+id).attr('livro');
-              var num_capitulo = $('#'+id).attr('num_capitulo');
-              var num_versiculo = $('#'+id).attr('num_versiculo');
-        
-              if (marcado==0) {
-                $('#'+id).attr('marcado',1);
-                $('#'+id).attr('txt_marcado',0);
-                $(".botao_controle").css("display","none");
-                $(".cores").css("display","");
-                $('#'+id).css("background","#f5f5f5");
-                lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos'));
-                app.retirarMarcadorVersiculo(livro, num_capitulo, num_versiculo, lista_versiculos);
-              }
-              else{
-                $(".copiar").css("display","none");
-                $(".compartilha").css("display","none");
-                id = $("[marcado=1]").attr('id');
-                $("#"+id).attr('marcado',0);
-                $('#'+id).attr('txt_marcado',1);
-                $(".cores").css("display","none");
-                $(".botao_controle").css("display","");
-                $("#"+id).css("background",cor);
-                var livro = $('#'+id).attr('livro');
-                var num_capitulo = $('#'+id).attr('num_capitulo');
-                var num_versiculo = $('#'+id).attr('num_versiculo');
-                var lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
-                if(livro && num_capitulo && num_versiculo){
-                  lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
-                  localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
-                }
-                usar_cores = 0;
-              }      
-            });
-          }
-        </script>
+                </script>
         <style>
           .button-margin {
             margin: 6px 0;
@@ -1767,7 +1767,7 @@
                 <ons-back-button>Conteúdo da Harpa</ons-back-button>
             </div>
             <div class="center"></div>
-            <div class="right" id="favoritar" style="color: #f5f5f5;margin-right: 16px;"><i class="fas fa-star"></i></div>
+            <div class="right" id="favoritar" style="margin-right: 16px;"><i class="fas fa-star"></i></div>
         </ons-toolbar>
         <div id='conteudoHarpa'></div>
         <script>
@@ -1861,7 +1861,7 @@
                 <ons-back-button>Notificações</ons-back-button>
             </div>
             <div class="center"></div>
-            <div class="right" id="limpar_notificacoes" style="color: #f5f5f5;margin-right: 16px;">Limpar</div>
+            <div class="right" id="limpar_notificacoes" style="margin-right: 16px;">Limpar</div>
 
         </ons-toolbar>
         <div id="textoNotificacoes">
@@ -2223,7 +2223,7 @@
             <ons-back-button>Cantor Cristão</ons-back-button>
         </div>
         <div class="center"></div>
-        <div class="right" id="botao_pesquisa_cantor" style="color: #f5f5f5;margin-right: 16px;"><ons-icon icon="fa-search"></ons-icon></div>
+        <div class="right" id="botao_pesquisa_cantor" style="margin-right: 16px;"><ons-icon icon="fa-search"></ons-icon></div>
     </ons-toolbar>
     <p style="text-align: center; margin: 0 0 10px 0;display: none;" id="pesquisa_cantor">
         <ons-search-input style="width: 100%;"
@@ -2584,7 +2584,7 @@
                 <ons-back-button>Conteúdo Cantor</ons-back-button>
             </div>
             <div class="center"></div>
-           <div class="right" id="favoritar_cantor" style="color: #f5f5f5;margin-right: 16px;"><i class="fas fa-star"></i></div>
+           <div class="right" id="favoritar_cantor" style="margin-right: 16px;"><i class="fas fa-star"></i></div>
 
         </ons-toolbar>
         <div id='conteudoCantor'></div>
@@ -2630,29 +2630,29 @@
       </div>
       <div  style="font-size: 20px" class="center"></div>
     </ons-toolbar>
-    <ons-card style="margin-top:60px;background-color: #333;" onclick="fn.pushPage({'id': 'quiz.html', 'title': 'Quiz Bíblico'})">
+    <ons-card style="margin-top:60px;" onclick="fn.pushPage({'id': 'quiz.html', 'title': 'Quiz Bíblico'})">
       <div class="title titulo_menu"><i class="fas fa-play"></i><br>Jogar</div>
     </ons-card>
 
     <ons-row>
       <ons-col>
-        <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'score.html', 'title': 'Score'})">
+        <ons-card onclick="fn.pushPage({'id': 'score.html', 'title': 'Score'})">
           <div class="title titulo_menu"><i class="fas fa-tachometer-alt"></i><br>Score</div>
         </ons-card>
       </ons-col>
  
       <ons-col>
-        <ons-card style="background-color: #333;" onclick="fn.loadLink('https://play.google.com/store/apps/dev?id=5836491033714204382')">
+        <ons-card onclick="fn.loadLink('https://play.google.com/store/apps/dev?id=5836491033714204382')">
           <div class="title titulo_menu"><i class="fab fa-google-play"></i><br>App's</div>
         </ons-card>
       </ons-col>
     </ons-row>
     
-    <ons-card style="background-color: #333;" onclick="fn.loadLink('https://www.innovatesoft.com.br/ranking.php')">
+    <ons-card onclick="fn.loadLink('https://www.innovatesoft.com.br/ranking.php')">
       <div class="title titulo_menu"><i class="fas fa-trophy"></i><br>Ranking</div>
     </ons-card>
 
-    <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'help.html', 'title': 'AJUDA'})">
+    <ons-card onclick="fn.pushPage({'id': 'help.html', 'title': 'AJUDA'})">
       <div class="title titulo_menu"><i class="fas fa-question-circle"></i><br>Ajuda</div>
     </ons-card>
     <script>
@@ -2692,13 +2692,11 @@
             </div>
             <div  style="font-size: 20px" class="center"></div>
         </ons-toolbar>
-        <ons-list-header style="font-size: 30px;">
             <div class="left">
             </div>
             <div class="center intro" id="maxScore" style="font-size: 100px;margin-top: 100px;">
                 Max Score
             </div>
-        </ons-list-header>
         
     <script>
         ons.getScriptPage().onInit = function () {
@@ -2750,7 +2748,6 @@
             </div>
             <div class="center"></div>
         </ons-toolbar>
-        <ons-list-header>
             <div class="left">
             </div>
             <div class="center intro" style="font-size: 25px">
@@ -2762,7 +2759,6 @@
 
                 <p>Bom desafio!</p>
             </div>
-        </ons-list-header>
         
     <script>
         ons.getScriptPage().onInit = function () {
@@ -2810,7 +2806,7 @@
         </ons-toolbar>
      
 
-        <ons-list-header style="font-size: 30px;margin-top: 10px;" id="textoquiz_">
+        <ons-list-header style="margin-top: 10px;" id="textoquiz_">
             <div class="center">
                 <span id="acerto"></span>
                 <span style="float: right;" id="erro"></span>

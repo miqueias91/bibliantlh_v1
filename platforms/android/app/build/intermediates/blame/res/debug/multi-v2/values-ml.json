@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
+            "outputFile": "/var/www/html/aplicativos/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
             "map": [
                 {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/716772ee0c496d3a3ed3cb4183a18137/jetified-play-services-basement-17.6.0/res/values-ml/values.xml",

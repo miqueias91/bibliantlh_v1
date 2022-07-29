@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "outputFile": "/var/www/html/aplicativos/bibliantlh_v1/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/06a648cc8d56c95a1b2599c40bd27720/jetified-play-services-ads-20.4.0/res/values/values.xml",
@@ -20,6 +20,23 @@
                         "endLines": "333,335,337,339,341,343,345,347,348,349,350,351,352,353",
                         "endColumns": "29,58,17,80,24,81,48,41,76,37,38,52,67,38",
                         "endOffsets": "23475,23693,23868,24102,24289,24512,24701,24828,24905,24943,24982,25035,25103,25142"
+                    }
+                },
+                {
+                    "source": "/var/www/html/aplicativos/bibliantlh_v1/platforms/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "176,55,117",
+                        "endColumns": "63,61,58",
+                        "endOffsets": "235,112,171"
+                    },
+                    "to": {
+                        "startLines": "304,305,331",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "20026,20090,23234",
+                        "endColumns": "63,61,58",
+                        "endOffsets": "20085,20147,23288"
                     }
                 },
                 {
@@ -133,23 +150,6 @@
                     }
                 },
                 {
-                    "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/build/generated/res/google-services/release/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,722",
-                        "endColumns": "143,81,103,108,119,107,84",
-                        "endOffsets": "194,276,380,489,609,717,802"
-                    },
-                    "to": {
-                        "startLines": "324,326,327,328,329,330,346",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "22485,22711,22793,22897,23006,23126,24706",
-                        "endColumns": "143,81,103,108,119,107,84",
-                        "endOffsets": "22624,22788,22892,23001,23121,23229,24786"
-                    }
-                },
-                {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/3deb0b3bda9cd0ae75012e572063071e/browser-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
@@ -184,6 +184,23 @@
                     }
                 },
                 {
+                    "source": "/var/www/html/aplicativos/bibliantlh_v1/platforms/android/app/build/generated/res/google-services/release/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,722",
+                        "endColumns": "143,81,103,108,119,107,84",
+                        "endOffsets": "194,276,380,489,609,717,802"
+                    },
+                    "to": {
+                        "startLines": "324,326,327,328,329,330,346",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "22485,22711,22793,22897,23006,23126,24706",
+                        "endColumns": "143,81,103,108,119,107,84",
+                        "endOffsets": "22624,22788,22892,23001,23121,23229,24786"
+                    }
+                },
+                {
                     "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/8946ba11a19d46b7ec9b3940766a79e9/jetified-firebase-messaging-19.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "4",
@@ -198,23 +215,6 @@
                         "startOffsets": "22629",
                         "endColumns": "81",
                         "endOffsets": "22706"
-                    }
-                },
-                {
-                    "source": "/var/www/html/biblia/bibliantlh_v1/platforms/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "176,55,117",
-                        "endColumns": "63,61,58",
-                        "endOffsets": "235,112,171"
-                    },
-                    "to": {
-                        "startLines": "304,305,331",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "20026,20090,23234",
-                        "endColumns": "63,61,58",
-                        "endOffsets": "20085,20147,23288"
                     }
                 },
                 {

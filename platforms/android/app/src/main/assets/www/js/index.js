@@ -1,3 +1,4 @@
+$('ons-navigator#appNavigator').hide();
 //INICIALIZO VARIAVEIS
 var timeout = 5000;
 var num_perg = 0;
@@ -120,6 +121,14 @@ window.fn = {};
 $("#existeProximoCapitulo").val(0);
 
 localStorage.setItem("modo-noturno", modo_noturno);
+if (modo_noturno) {
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/onsenui/dark-onsen-css-components.min.css">');
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/index_dark.css">');
+}
+else {
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/onsenui/onsen-css-components.min.css">');
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/index_.css">');
+}
 
 if (!window.localStorage.getItem('lista-versiculos')) {
   localStorage.setItem("lista-versiculos", '[]'); 
@@ -555,13 +564,12 @@ var app = {
     },
 
     buscaTexto: function(versaoId,livro,capitulo, nome) {
+        $('ons-navigator#appNavigator').show();
         inicioLeitura = 0;
         localStorage.setItem("ultimo_livro_lido", nome);
         localStorage.setItem("ultimo_livro_lido_abr", livro);
         localStorage.setItem("ultimo_capitulo_lido", capitulo);
         fonte_versiculo = JSON.parse(localStorage.getItem('fonte-versiculo'));
-        modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
-
         $("#textoLivro").html('');
         var versaoId = versaoId || 'nvi';
         var selector = this;
@@ -578,28 +586,18 @@ var app = {
                                 var marcado = 0;
                                 var txt_marcado = 0;
                                 var capitulo_marcado = 0;
-                                var background = '#f5f5f5';
-                                var color = '1f1f21';
+                                var existe_marcado = '';
+                                var color = '';
                                 var existe_marcado = app.incluirMarcadorVersiculo(livro, capitulo, (parseInt(data[i]['verse'])));
                                 var existe_capitulo = app.incluirCapitulo(livro+' '+capitulo);
-                                if (modo_noturno) {
-                                    background = '#333';
-                                    color = 'fff';
-                                }
-
-                                if (existe_marcado) {
-                                    txt_marcado = 1;
-                                    background = existe_marcado;
-                                    color = '1f1f21';
-                                }
 
                                 if (existe_capitulo) {
                                     capitulo_marcado = 1;
                                 }
 
                                 var texto = data[i]['text'];
-                                texts += '<ons-list-item style="background:'+background+';color:#'+color+'" id="txt_versiculo'+livro+'_'+capitulo+'_'+(parseInt(data[i]['verse']))+'_">'+
-                                '<p style="font-size: '+fonte_versiculo+'px;text-align:justify;line-height: 35px;background:'+background+';color:#'+color+'"  id="txt_versiculo'+livro+'_'+capitulo+'_'+(parseInt(data[i]['verse']))+'" class="txt_versiculo" livro="'+livro+'" num_capitulo="'+capitulo+'" num_versiculo="'+(parseInt(data[i]['verse']))+'" marcado="'+marcado+'" txt_marcado="'+txt_marcado+'" txt_versiculo="'+texto+'">'+
+                                texts += '<ons-list-item class="'+existe_marcado+'" id="txt_versiculo'+livro+'_'+capitulo+'_'+(parseInt(data[i]['verse']))+'_">'+
+                                '<p style="font-size: '+fonte_versiculo+'px;text-align:justify;line-height: 35px;"  id="txt_versiculo'+livro+'_'+capitulo+'_'+(parseInt(data[i]['verse']))+'" class="txt_versiculo" livro="'+livro+'" num_capitulo="'+capitulo+'" num_versiculo="'+(parseInt(data[i]['verse']))+'" marcado="'+marcado+'" txt_marcado="'+txt_marcado+'" txt_versiculo="'+texto+'">'+
                                 '<span style="font-weight:bold;">'+(parseInt(data[i]['verse']))+'</span>'+
                                 '&nbsp;&nbsp;'+texto+ 
                                 '</p>'+
@@ -621,7 +619,6 @@ var app = {
                     $( ".marcar_capitulo" ).click(function() {
                         var capitulo_marcar = $(this).attr('livro_marcar')+" "+$(this).attr('num_capitulo_marcar');
                         capitulo = $(this).attr('capitulo_marcado');
-
                         if (capitulo == 0) {
                             $(this).attr('capitulo_marcado',1);
                             var lista_capitulos = JSON.parse(localStorage.getItem('lista-capitulos') || '[]');
@@ -656,16 +653,10 @@ var app = {
                                 $('#'+id).attr('marcado',1);
                                 $('#'+id).attr('txt_marcado',0);
                                 $(".botao_controle").css("display","none");
-
-                                color = '#fff';
-                                modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
-                                if (modo_noturno) {
-                                    color = '#333';
-                                }
-                                $('#'+id).css("color",color);
-                                $('#'+id).css("background","#ccc");
-
-
+                                $('#'+id).addClass( "grey" );
+                                $('#'+id).removeClass( "green" );
+                                $('#'+id).removeClass( "yellow" );
+                                $('#'+id).removeClass( "orange" );
                                 lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos'));
                                 app.retirarMarcadorVersiculo(livro, num_capitulo, num_versiculo, lista_versiculos);
                             }
@@ -688,56 +679,13 @@ var app = {
                                         $(".compartilha").css("display","none");
                                     }
                                 }
-                                background = '#f5f5f5';
-                                color = '#1f1f21';
-                                modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
-                                if (modo_noturno) {
-                                    background = '#333';
-                                    color = '#fff';
-                                }
-                                $('#'+id).css("background",background);
-                                $('#'+id).css("color",color);
+                                $('#'+id).removeClass( "grey" );
+                                $('#'+id+'_').removeClass( "green" );
+                                $('#'+id+'_').removeClass( "yellow" );
+                                $('#'+id+'_').removeClass( "orange" );
                                 lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos'));
                                 app.retirarMarcadorVersiculo(livro, num_capitulo, num_versiculo, lista_versiculos);
                             }      
-                        }      
-                    });
-
-                    $( ".cores" ).click(function() {
-                        marcado = $(this).attr('marcado');
-                        var cor = $(this).attr('id');
-                        var livro = $('#'+id).attr('livro');
-                        var num_capitulo = $('#'+id).attr('num_capitulo');
-                        var num_versiculo = $('#'+id).attr('num_versiculo');
-
-                        if (marcado==0) {
-                            $('#'+id).attr('marcado',1);
-                            $('#'+id).attr('txt_marcado',0);
-                            $(".botao_controle").css("display","none");
-                            $(".cores").css("display","");
-                            $('#'+id).css("background","#f5f5f5");
-                            lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos'));
-                            app.retirarMarcadorVersiculo(livro, num_capitulo, num_versiculo, lista_versiculos);
-                        }
-                        else{
-                            $(".copiar").css("display","none");
-                            $(".compartilha").css("display","none");
-                            id = $("[marcado=1]").attr('id');
-                            $("#"+id).attr('marcado',0);
-                            $('#'+id).attr('txt_marcado',1);
-                            $(".cores").css("display","none");
-                            $(".botao_controle").css("display","");
-                            $("#"+id).css("background",cor);
-                            var livro = $('#'+id).attr('livro');
-                            var num_capitulo = $('#'+id).attr('num_capitulo');
-                            var num_versiculo = $('#'+id).attr('num_versiculo');
-
-                            var lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
-                            if(livro && num_capitulo && num_versiculo){
-                                lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
-                                localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
-                            }
-                            usar_cores = 0;
                         }      
                     });
                 }
@@ -837,66 +785,57 @@ var app = {
         xmlhttp.send();
     },
 
-  buscaHinario: function(id) {
-      var selector = this;
-      var texto = "";
+    buscaHinario: function(id) {
+        var selector = this;
+        var texto = "";
 
-      $.ajax({
-      type : "GET",
-      url : "js/harpa.json",
-      dataType : "json",
-      success : function(data){
-        $(selector).each(function(){
-          var myBook = null;
-          var refrao = "";
-          var obj = {
-            id : id,
-            text : ""
-          };
-          background = '#f5f5f5';
-          color = '1f1f21';
-          modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
-          if (modo_noturno) {
-            background = '#333';
-            color = 'fff';
-          }
-          if (modo_noturno) {
-            background = '#333';
-            color = 'fff';
-          }
+        $.ajax({
+            type : "GET",
+            url : "js/harpa.json",
+            dataType : "json",
+            success : function(data){
+                $(selector).each(function(){
+                    var myBook = null;
+                    var refrao = "";
+                    var obj = {
+                        id : id,
+                        text : ""
+                    };
+                    background = '';
+                    color = '';
 
-          if (data) {
-            for(i in data){
-              if(data[i].id == obj.id){
-                myBook = data[i];
-              }
-            } 
-            for (var i = 0; i < myBook['hinario'].length; i++) {
-              texto = myBook['hinario'][i];
-              if(texto.substr(0, 1) == '*'){
-                refrao = texto.replace("*","");
-                obj.text += 
-                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+';font-weight:bold">'+
-                '<p style="line-height:31px;margin:0;font-weight:bold;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
-                '<i>'+refrao+ 
-                '</i></p>'+
-                '</ons-list-item>';
-              }
-              if(texto.substr(0, 1) != '*'){
-                obj.text += 
-                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+'">'+
-                '<p style="line-height:31px;margin:0;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
-                ''+texto+ 
-                '</p>'+
-                '</ons-list-item>';
-              }
+                    if (data) {
+                        for(i in data){
+                            if(data[i].id == obj.id){
+                                myBook = data[i];
+                            }
+                        } 
+                        for (var i = 0; i < myBook['hinario'].length; i++) {
+                            texto = myBook['hinario'][i];
+                            if(texto.substr(0, 1) == '*'){
+                                refrao = texto.replace("*","");
+                                obj.text += 
+                                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+';font-weight:bold">'+
+                                '<p style="line-height:31px;margin:0;font-weight:bold;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
+                                '<i>'+refrao+ 
+                                '</i></p>'+
+                                '</ons-list-item>';
+                            }
+                            if(texto.substr(0, 1) != '*'){
+                                obj.text += 
+                                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+'">'+
+                                '<p style="line-height:31px;margin:0;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
+                                ''+texto+ 
+                                '</p>'+
+                                '</ons-list-item>';
+                            }
+                        }
+                    }
+                    $("#conteudoHarpa").html(obj.text);
+                });
             }
-          }
-          $("#conteudoHarpa").html(obj.text);
         });
-      }
-      });
-  },
+    },
 
   listaHinario: function() {
     var text = "";
@@ -1100,66 +1039,55 @@ var app = {
       }
   },
 
-  buscaCantor: function(id) {
-      var selector = this;
-      var texto = "";
+    buscaCantor: function(id) {
+        var selector = this;
+        var texto = "";
+        $.ajax({
+            type : "GET",
+            url : "js/cantor.json",
+            dataType : "json",
+            success : function(data){
+                $(selector).each(function(){
+                    var myBook = null;
+                    var obj = {
+                        id : id,
+                        text : ""
+                    };
+                    background = '';
+                    color = '';
+                    if (data) {
+                        for(i in data){
+                            if(data[i].id == obj.id){
+                                myBook = data[i];
+                            }
+                        }
 
-      $.ajax({
-      type : "GET",
-      url : "js/cantor.json",
-      dataType : "json",
-          success : function(data){
-        $(selector).each(function(){
-          var myBook = null;
-          var obj = {
-            id : id,
-            text : ""
-          };
-          background = '#f5f5f5';
-          color = '1f1f21';
-          modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
-          if (modo_noturno) {
-            background = '#333';
-            color = 'fff';
-          }
-          if (modo_noturno) {
-            background = '#333';
-            color = 'fff';
-          }
-
-          if (data) {
-            for(i in data){
-              if(data[i].id == obj.id){
-                myBook = data[i];
-              }
+                        for (var i = 0; i < myBook['hinario'].length; i++) {
+                            texto = myBook['hinario'][i];
+                            if(texto.substr(0, 1) == '*'){
+                                refrao = texto.replace("*","");
+                                obj.text += 
+                                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+';font-weight:bold">'+
+                                '<p style="line-height:31px;margin:0;font-weight:bold;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
+                                '<i>'+refrao+ 
+                                '</i></p>'+
+                                '</ons-list-item>';
+                            }
+                            if(texto.substr(0, 1) != '*'){
+                                obj.text += 
+                                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+'">'+
+                                '<p style="line-height:31px;margin:0;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
+                                ''+texto+ 
+                                '</p>'+
+                                '</ons-list-item>';
+                            }
+                        }
+                    }
+                    $("#conteudoCantor").html(obj.text);
+                });
             }
-
-            for (var i = 0; i < myBook['hinario'].length; i++) {
-              texto = myBook['hinario'][i];
-              if(texto.substr(0, 1) == '*'){
-                refrao = texto.replace("*","");
-                obj.text += 
-                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+';font-weight:bold">'+
-                '<p style="line-height:31px;margin:0;font-weight:bold;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
-                '<i>'+refrao+ 
-                '</i></p>'+
-                '</ons-list-item>';
-              }
-              if(texto.substr(0, 1) != '*'){
-                obj.text += 
-                '<ons-list-item style="padding:0 16px;background:'+background+';color:#'+color+'">'+
-                '<p style="line-height:31px;margin:0;font-size:20px;text-align:left;background:'+background+';color:#'+color+'">'+
-                ''+texto+ 
-                '</p>'+
-                '</ons-list-item>';
-              }
-            }
-          }
-          $("#conteudoCantor").html(obj.text);
         });
-          }
-      });
-  },
+    },
 
     listaCantor: function() {
         var text = "";
@@ -1458,7 +1386,7 @@ var app = {
               }
 
               if (pergunta) {
-                obj.opcoes = '<ons-list-header style="font-size: 25px;">'+(num_pergunta+1)+' - '+pergunta+'</ons-list-header>';
+                obj.opcoes = '<ons-list-header>'+(num_pergunta+1)+' - '+pergunta+'</ons-list-header>';
                   for (var i in respostas) {
                     if (respostas[i]) {
               obj.opcoes +=
@@ -1482,16 +1410,16 @@ var app = {
 
               obj.opcoes +=
               '<section style="margin: 20px">'+
-              '  <ons-button modifier="large" style="padding: 10px;box-shadow:0 5px 0 #ccc;" class="button-margin responder">RESPONDER</ons-button>'+
+              '  <ons-button modifier="large" class="button-margin responder">RESPONDER</ons-button>'+
               '  <ons-row>'+
               '      <ons-col style="margin-right: 10px;">'+
-              '          <ons-button modifier="large" style="padding: 10px;box-shadow:0 5px 0 #ccc;" class="button-margin pular">PULAR ('+pulos+'X)</ons-button>'+
+              '          <ons-button modifier="large" class="button-margin pular">PULAR ('+pulos+'X)</ons-button>'+
               '      </ons-col>'+
               '      <ons-col>'+
-              '          <ons-button modifier="large" style="padding: 10px;box-shadow:0 5px 0 #ccc;" class="button-margin eliminar">ELIMINAR ('+eliminar+'X)</ons-button>'+
+              '          <ons-button modifier="large" class="button-margin eliminar">ELIMINAR ('+eliminar+'X)</ons-button>'+
               '      </ons-col>'+
               '  </ons-row>'+
-              '  <ons-button modifier="large" style="padding: 10px;box-shadow:0 5px 0 #ccc;" class="button-margin finalizar">FINALIZAR</ons-button>'+
+              '  <ons-button modifier="large" class="button-margin finalizar">FINALIZAR</ons-button>'+
 
               '</section>';
 
@@ -1722,7 +1650,7 @@ var app = {
       '  <ons-list-header>'+
       '      <div class="left">'+
       '      </div>'+
-      '      <div class="center intro" style="font-size: 25px">'+
+      '      <div class="center intro">'+
       '          <p>Volte para carregar as perguntas!</p>'+
       '      </div>'+
       '  </ons-list-header>'+
@@ -1921,52 +1849,43 @@ var app = {
         var capitulos = dados[1].split('-');
         var plano_versiculo_marcado = '';
         var text = '';
-        var background = '#f5f5f5';
-        var color = '1f1f21';
+        var background = '';
+        var color = '';
         var modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
         var fonte_versiculo = JSON.parse(localStorage.getItem('fonte-versiculo'));
-
-        if (modo_noturno) {
-          background = '#333';
-          color = 'fff';
-        }
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var data = JSON.parse(this.responseText);
-            if (data) {
-              for (var i = 0; i < data.length; i++) {            
-                if ((data[i]['abbrev']).toLowerCase() === livro.toLowerCase()) {
-                  for (var j = parseInt(capitulos[0]); j <= parseInt(capitulos[(capitulos.length)-1]); j++) {
-                    if (parseInt(data[i]['chapter']) == j) {
-                      var texto = data[i]['text'];
-                      var verse = data[i]['verse'];
-                      text += '<ons-list-item style="background:'+background+';color:#'+color+'">'+
+            if (this.readyState == 4 && this.status == 200) {
+                var data = JSON.parse(this.responseText);
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {            
+                        if ((data[i]['abbrev']).toLowerCase() === livro.toLowerCase()) {
+                            for (var j = parseInt(capitulos[0]); j <= parseInt(capitulos[(capitulos.length)-1]); j++) {
+                                if (parseInt(data[i]['chapter']) == j) {
+                                    var texto = data[i]['text'];
+                                    var verse = data[i]['verse'];
+                                    text += '<ons-list-item style="background:'+background+';color:#'+color+'">'+
                                     '<p style="font-size: '+fonte_versiculo+'px;text-align:justify;line-height: 35px;background:'+background+';color:#'+color+'" >'+
-                                      '<span style="font-weight:bold;">'+(parseInt(j))+':'+(parseInt(verse))+'</span>'+
-                                      '&nbsp;&nbsp;'+texto+ 
+                                    '<span style="font-weight:bold;">'+(parseInt(j))+':'+(parseInt(verse))+'</span>'+
+                                    '&nbsp;&nbsp;'+texto+ 
                                     '</p>'+
-                                  '</ons-list-item>';
+                                    '</ons-list-item>';
+                                }
+                            }
+                        }
                     }
-     
-                  }
+                    var classe_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculos) ? 'plano_desmarcar' : 'plano_marcar';
+                    var nome_btn_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculos) ? 'DESMARCAR COMO CONCLUÍDO' : 'MARCAR COMO CONCLUÍDO';
+                    text += '<br><br><section style="margin: 16px"><ons-button id="btn_marcado_descarmado" modifier="large" class="button-margin '+classe_marcado_descarmado+'"><span>'+nome_btn_marcado_descarmado+'</span></ons-button></section>';
+                    $('#txtPlanoLeituraAnualConteudoTexto').html(text);
+                    $( ".plano_marcar" ).click(function() {
+                        app.marcarVersiculosPlanoLeituraAnualConcluido(versiculos)
+                    });
+                    $( ".plano_desmarcar" ).click(function() {
+                        app.retirarVersiculosPlanoLeituraAnualConcluido(versiculos)
+                    });
                 }
-              }
-
-              var classe_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculos) ? 'plano_desmarcar' : 'plano_marcar';
-              var nome_btn_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculos) ? 'DESMARCAR COMO CONCLUÍDO' : 'MARCAR COMO CONCLUÍDO';
-              text += '<br><br><section style="margin: 16px"><ons-button id="btn_marcado_descarmado" modifier="large" class="button-margin '+classe_marcado_descarmado+'"><span>'+nome_btn_marcado_descarmado+'</span></ons-button></section>';
-              $('#txtPlanoLeituraAnualConteudoTexto').html(text);
-
-              $( ".plano_marcar" ).click(function() {
-                app.marcarVersiculosPlanoLeituraAnualConcluido(versiculos)
-              });
-
-              $( ".plano_desmarcar" ).click(function() {
-                app.retirarVersiculosPlanoLeituraAnualConcluido(versiculos)
-              });
             }
-          }
         };
         xmlhttp.open("GET", "js/"+versaoId+"_.json", true);
         xmlhttp.send();

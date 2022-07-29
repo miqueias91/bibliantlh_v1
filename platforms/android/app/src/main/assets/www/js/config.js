@@ -2,7 +2,7 @@ var config = new Object();
 //VERSAO
 config.titulo = "Bíblia Sagrada NTLH - V1";
 config.url = "https://bit.ly/37Swghd";
-config.versao = "1.0.36";
+config.versao = "1.0.38";
 config.app_ = "ntlh";
 config.versao_biblia = "ntlh";
 
